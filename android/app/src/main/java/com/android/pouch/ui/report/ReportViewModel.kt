@@ -1,13 +1,13 @@
-package com.pouch.android.ui.notifications
+package com.android.pouch.ui.report
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class ReportViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is report Fragment"
     }
     val text: LiveData<String> = _text
 }

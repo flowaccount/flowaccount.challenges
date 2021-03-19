@@ -1,4 +1,4 @@
-package com.pouch.android
+package com.android.pouch
 
 import org.junit.Test
 

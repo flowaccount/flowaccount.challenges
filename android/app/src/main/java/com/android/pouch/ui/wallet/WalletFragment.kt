@@ -1,4 +1,4 @@
-package com.pouch.android.ui.home
+package com.android.pouch.ui.wallet
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,22 +8,22 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.pouch.android.R
+import com.android.pouch.R
 
-class HomeFragment : Fragment() {
+class WalletFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var walletViewModel: WalletViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-                ViewModelProvider(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+        walletViewModel =
+                ViewModelProvider(this).get(WalletViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_wallet, container, false)
+        val textView: TextView = root.findViewById(R.id.text_wallet)
+        walletViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
