@@ -1,11 +1,11 @@
 {
-  "extends": ["plugin:cypress/recommended", "../../.eslintrc.json"],
+  "extends": ["plugin:cypress/recommended", "../../../.eslintrc.json"],
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "parserOptions": {
-        "project": "apps/covid19-local-adventures-e2e/tsconfig.*?.json"
+        "project": "apps/frontend/pouch-e2e/tsconfig.*?.json"
       },
       "rules": {}
     },

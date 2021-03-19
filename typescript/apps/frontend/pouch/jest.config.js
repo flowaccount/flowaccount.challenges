@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'covid19-local-adventures',
-  preset: '../../jest.preset.js',
+  displayName: 'frontend-pouch',
+  preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -14,7 +14,7 @@ module.exports = {
       },
     },
   },
-  coverageDirectory: '../../coverage/apps/covid19-local-adventures',
+  coverageDirectory: '../../../coverage/apps/frontend/pouch',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

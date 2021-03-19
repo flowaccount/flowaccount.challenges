@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('covid19-local-adventures', () => {
+describe('frontend-pouch', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('covid19-local-adventures', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to covid19-local-adventures!');
+    getGreeting().contains('Welcome to frontend-pouch!');
   });
 });

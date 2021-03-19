@@ -3,7 +3,7 @@
   "cli": {
     "defaultCollection": "@nrwl/angular"
   },
-  "defaultProject": "covid19-local-adventures",
+  "defaultProject": "frontend-pouch",
   "schematics": {
     "@nrwl/angular": {
       "application": {
@@ -32,34 +32,34 @@
     }
   },
   "projects": {
-    "covid19-local-adventures": {
+    "frontend-pouch": {
       "projectType": "application",
-      "root": "apps/covid19-local-adventures",
-      "sourceRoot": "apps/covid19-local-adventures/src",
+      "root": "apps/frontend/pouch",
+      "sourceRoot": "apps/frontend/pouch/src",
       "prefix": "typescript",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/covid19-local-adventures",
-            "index": "apps/covid19-local-adventures/src/index.html",
-            "main": "apps/covid19-local-adventures/src/main.ts",
-            "polyfills": "apps/covid19-local-adventures/src/polyfills.ts",
-            "tsConfig": "apps/covid19-local-adventures/tsconfig.app.json",
+            "outputPath": "dist/apps/frontend/pouch",
+            "index": "apps/frontend/pouch/src/index.html",
+            "main": "apps/frontend/pouch/src/main.ts",
+            "polyfills": "apps/frontend/pouch/src/polyfills.ts",
+            "tsConfig": "apps/frontend/pouch/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/covid19-local-adventures/src/favicon.ico",
-              "apps/covid19-local-adventures/src/assets"
+              "apps/frontend/pouch/src/favicon.ico",
+              "apps/frontend/pouch/src/assets"
             ],
-            "styles": ["apps/covid19-local-adventures/src/styles.scss"],
+            "styles": ["apps/frontend/pouch/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/covid19-local-adventures/src/environments/environment.ts",
-                  "with": "apps/covid19-local-adventures/src/environments/environment.prod.ts"
+                  "replace": "apps/frontend/pouch/src/environments/environment.ts",
+                  "with": "apps/frontend/pouch/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -87,63 +87,61 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "covid19-local-adventures:build"
+            "browserTarget": "frontend-pouch:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "covid19-local-adventures:build:production"
+              "browserTarget": "frontend-pouch:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "covid19-local-adventures:build"
+            "browserTarget": "frontend-pouch:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/covid19-local-adventures/src/**/*.ts",
-              "apps/covid19-local-adventures/src/**/*.html"
+              "apps/frontend/pouch/src/**/*.ts",
+              "apps/frontend/pouch/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/covid19-local-adventures"],
+          "outputs": ["coverage/apps/frontend/pouch"],
           "options": {
-            "jestConfig": "apps/covid19-local-adventures/jest.config.js",
+            "jestConfig": "apps/frontend/pouch/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "covid19-local-adventures-e2e": {
-      "root": "apps/covid19-local-adventures-e2e",
-      "sourceRoot": "apps/covid19-local-adventures-e2e/src",
+    "frontend-pouch-e2e": {
+      "root": "apps/frontend/pouch-e2e",
+      "sourceRoot": "apps/frontend/pouch-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/covid19-local-adventures-e2e/cypress.json",
-            "tsConfig": "apps/covid19-local-adventures-e2e/tsconfig.e2e.json",
-            "devServerTarget": "covid19-local-adventures:serve"
+            "cypressConfig": "apps/frontend/pouch-e2e/cypress.json",
+            "tsConfig": "apps/frontend/pouch-e2e/tsconfig.e2e.json",
+            "devServerTarget": "frontend-pouch:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "covid19-local-adventures:serve:production"
+              "devServerTarget": "frontend-pouch:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/covid19-local-adventures-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/frontend/pouch-e2e/**/*.{js,ts}"]
           }
         }
       }
