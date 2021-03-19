@@ -1,16 +1,34 @@
 PODS:
   - ObjectMapper (4.2.0)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+  - Swinject (2.7.1)
 
 DEPENDENCIES:
   - ObjectMapper
+  - RxCocoa
+  - RxSwift
+  - Swinject
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - ObjectMapper
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - Swinject
 
 SPEC CHECKSUMS:
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: a78aca77fbeea73af563d4c369d32562ce746165
+PODFILE CHECKSUM: 658729a60d749b9406457272e42da7e052d6ff29
 
 COCOAPODS: 1.10.1
