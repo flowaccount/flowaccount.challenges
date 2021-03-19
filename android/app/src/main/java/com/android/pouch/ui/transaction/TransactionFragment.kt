@@ -9,21 +9,20 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.android.pouch.R
+import org.koin.android.ext.android.inject
 
 class TransactionFragment : Fragment() {
 
-    private lateinit var transactionViewModel: TransactionViewModel
+    private val viewModel: TransactionViewModel by inject()
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        transactionViewModel =
-                ViewModelProvider(this).get(TransactionViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_transaction, container, false)
         val textView: TextView = root.findViewById(R.id.text_transaction)
-        transactionViewModel.text.observe(viewLifecycleOwner, Observer {
+        viewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
