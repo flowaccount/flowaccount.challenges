@@ -1,0 +1,25 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+workspace 'Pouch'
+platform :ios, '13.0'
+use_frameworks!
+
+def common_pods
+  pod 'ObjectMapper'
+end
+
+target 'Pouch' do
+  inhibit_all_warnings!
+
+  common_pods
+
+  target 'PouchTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'PouchUITests' do
+    # Pods for testing
+  end
+
+end

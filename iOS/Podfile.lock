@@ -1,0 +1,16 @@
+PODS:
+  - ObjectMapper (4.2.0)
+
+DEPENDENCIES:
+  - ObjectMapper
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ObjectMapper
+
+SPEC CHECKSUMS:
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+
+PODFILE CHECKSUM: a78aca77fbeea73af563d4c369d32562ce746165
+
+COCOAPODS: 1.10.1
