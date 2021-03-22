@@ -10,10 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="569ed4aa-fdcc-4031-a46b-551fd4b7b2cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/entity/BaseAPIResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_transaction.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/repository/TransactionRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/repository/TransactionRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/repository/service/TransactionService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/repository/service/TransactionService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +26,18 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -33,6 +45,8 @@
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
         <option value="Kotlin Data Class" />
+        <option value="layoutResourceFile" />
+        <option value="valueResourceFile" />
       </list>
     </option>
   </component>
@@ -151,22 +165,26 @@
       <screen x="0" y="25" width="1680" height="964" />
     </state>
     <state x="603" y="220" key="#xdebugger.evaluate/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616410222280" />
-    <state width="1636" height="311" key="GridCell.Tab.0.bottom" timestamp="1616410849421">
+    <state x="428" y="266" key="AndroidCreateResourceFileDialog" timestamp="1616414394135">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state width="1636" height="311" key="GridCell.Tab.0.bottom/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616410849421" />
-    <state width="1636" height="311" key="GridCell.Tab.0.center" timestamp="1616410849420">
+    <state x="428" y="266" key="AndroidCreateResourceFileDialog/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616414394135" />
+    <state width="1636" height="311" key="GridCell.Tab.0.bottom" timestamp="1616411135229">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state width="1636" height="311" key="GridCell.Tab.0.center/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616410849420" />
-    <state width="1636" height="311" key="GridCell.Tab.0.left" timestamp="1616410849420">
+    <state width="1636" height="311" key="GridCell.Tab.0.bottom/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616411135229" />
+    <state width="1636" height="311" key="GridCell.Tab.0.center" timestamp="1616411135228">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state width="1636" height="311" key="GridCell.Tab.0.left/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616410849420" />
-    <state width="1636" height="311" key="GridCell.Tab.0.right" timestamp="1616410849421">
+    <state width="1636" height="311" key="GridCell.Tab.0.center/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616411135228" />
+    <state width="1636" height="311" key="GridCell.Tab.0.left" timestamp="1616411135228">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state width="1636" height="311" key="GridCell.Tab.0.right/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616410849421" />
+    <state width="1636" height="311" key="GridCell.Tab.0.left/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616411135228" />
+    <state width="1636" height="311" key="GridCell.Tab.0.right" timestamp="1616411135229">
+      <screen x="0" y="25" width="1680" height="964" />
+    </state>
+    <state width="1636" height="311" key="GridCell.Tab.0.right/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616411135229" />
     <state width="1636" height="257" key="GridCell.Tab.1.bottom" timestamp="1616410255879">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
@@ -187,10 +205,10 @@
       <screen x="0" y="25" width="1680" height="964" />
     </state>
     <state x="532" y="262" width="940" height="490" key="find.popup/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616400045547" />
-    <state x="505" y="237" width="670" height="676" key="search.everywhere.popup" timestamp="1616410121004">
+    <state x="505" y="237" width="670" height="676" key="search.everywhere.popup" timestamp="1616413651969">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
     <state x="505" y="237" width="670" height="676" key="search.everywhere.popup/0.25.1680.965@0.25.1680.965" timestamp="1616156191063" />
-    <state x="505" y="237" width="670" height="676" key="search.everywhere.popup/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616410121004" />
+    <state x="505" y="237" width="670" height="676" key="search.everywhere.popup/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616413651969" />
   </component>
 </project>

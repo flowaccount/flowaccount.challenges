@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TransactionTitleTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/item_transaction_title</item>
+    </style>
+
+    <style name="TransactionSubTitleTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/item_transaction_subtitle</item>
+    </style>
+
+    <style name="TransactionBodyTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/item_transaction_body</item>
+    </style>
+</resources>
