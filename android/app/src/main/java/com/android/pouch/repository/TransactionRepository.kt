@@ -13,6 +13,6 @@ class TransactionRepository @Inject constructor(
         // if null get from service
         // update cache
         // return
-        return service.getTransactions()
+        return service.getTransactions().data
     }
 }
