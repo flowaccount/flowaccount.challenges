@@ -1,4 +1,4 @@
-package com.android.pouch.ui.transaction
+package com.android.pouch.ui.transaction.list
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

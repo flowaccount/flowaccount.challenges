@@ -1,4 +1,4 @@
-package com.android.pouch.ui.transaction
+package com.android.pouch.ui.transaction.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

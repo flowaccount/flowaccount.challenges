@@ -1,4 +1,4 @@
-package com.android.pouch.ui.transaction
+package com.android.pouch.ui.transaction.list
 
 import android.os.Bundle
 import android.util.Log
