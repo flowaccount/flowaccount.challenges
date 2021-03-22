@@ -1,4 +1,11 @@
 package com.android.pouch.repository
 
-class TransactionRepository {
+import com.android.pouch.repository.service.TransactionService
+import javax.inject.Inject
+
+class TransactionRepository @Inject constructor(
+    private val service: TransactionService
+): ITransactionRepository {
+
+
 }
