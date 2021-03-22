@@ -1,5 +1,7 @@
 package com.android.pouch.entity
 
+import com.google.gson.annotations.SerializedName
+
 data class Transaction(
-    var amount: Double
+    @SerializedName("amount") var amount: Double
 )
