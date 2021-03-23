@@ -10,12 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="569ed4aa-fdcc-4031-a46b-551fd4b7b2cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/base/ProgressableFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/transaction/list/TransactionListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/transaction/list/TransactionListFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_transaction_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_transaction_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/transaction/list/TransactionListViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/transaction/list/TransactionListViewModel.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +71,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.android.pouch.ui.base" />
       <recent name="com.android.pouch.ui.transaction.detail" />
       <recent name="com.android.pouch.ui.transaction.list" />
       <recent name="com.android.pouch.ui.transaction" />
@@ -165,9 +166,10 @@
       <screen x="0" y="25" width="1680" height="964" />
     </state>
     <state x="612" y="95" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616399938880" />
-    <state x="604" y="303" width="493" height="409" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1616415414529">
+    <state x="604" y="303" width="493" height="409" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1616479306497">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
+    <state x="604" y="303" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616479306497" />
     <state x="604" y="303" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.25.1680.965@0.25.1680.965" timestamp="1616155978051" />
     <state x="604" y="303" width="493" height="409" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616415414529" />
     <state x="603" y="220" key="#xdebugger.evaluate" timestamp="1616410222280">
@@ -178,25 +180,25 @@
       <screen x="0" y="25" width="1680" height="964" />
     </state>
     <state x="428" y="266" key="AndroidCreateResourceFileDialog/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616414394135" />
-    <state width="1636" height="257" key="GridCell.Tab.0.bottom" timestamp="1616477942233">
+    <state width="1636" height="311" key="GridCell.Tab.0.bottom" timestamp="1616479182989">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state width="1636" height="257" key="GridCell.Tab.0.bottom/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616477942233" />
+    <state width="1636" height="311" key="GridCell.Tab.0.bottom/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616479182989" />
     <state width="1636" height="257" key="GridCell.Tab.0.bottom/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616415981062" />
-    <state width="1636" height="257" key="GridCell.Tab.0.center" timestamp="1616477942232">
+    <state width="1636" height="311" key="GridCell.Tab.0.center" timestamp="1616479182988">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state width="1636" height="257" key="GridCell.Tab.0.center/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616477942232" />
+    <state width="1636" height="311" key="GridCell.Tab.0.center/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616479182988" />
     <state width="1636" height="257" key="GridCell.Tab.0.center/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616415981062" />
-    <state width="1636" height="257" key="GridCell.Tab.0.left" timestamp="1616477942231">
+    <state width="1636" height="311" key="GridCell.Tab.0.left" timestamp="1616479182988">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state width="1636" height="257" key="GridCell.Tab.0.left/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616477942231" />
+    <state width="1636" height="311" key="GridCell.Tab.0.left/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616479182988" />
     <state width="1636" height="257" key="GridCell.Tab.0.left/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616415981061" />
-    <state width="1636" height="257" key="GridCell.Tab.0.right" timestamp="1616477942232">
+    <state width="1636" height="311" key="GridCell.Tab.0.right" timestamp="1616479182989">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state width="1636" height="257" key="GridCell.Tab.0.right/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616477942232" />
+    <state width="1636" height="311" key="GridCell.Tab.0.right/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616479182989" />
     <state width="1636" height="257" key="GridCell.Tab.0.right/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616415981062" />
     <state width="1636" height="257" key="GridCell.Tab.1.bottom" timestamp="1616415981064">
       <screen x="0" y="25" width="1680" height="964" />
