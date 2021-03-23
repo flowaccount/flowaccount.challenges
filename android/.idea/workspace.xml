@@ -10,7 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="569ed4aa-fdcc-4031-a46b-551fd4b7b2cc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/transaction/list/TransactionListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/transaction/list/TransactionListFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_transaction_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_transaction_list.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,10 +218,10 @@
       <screen x="0" y="25" width="1680" height="964" />
     </state>
     <state x="532" y="262" width="940" height="490" key="find.popup/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616400045547" />
-    <state x="505" y="237" width="670" height="676" key="search.everywhere.popup" timestamp="1616476695250">
+    <state x="505" y="237" width="670" height="676" key="search.everywhere.popup" timestamp="1616478927273">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state x="505" y="237" width="670" height="676" key="search.everywhere.popup/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616476695250" />
+    <state x="505" y="237" width="670" height="676" key="search.everywhere.popup/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616478927273" />
     <state x="505" y="237" width="670" height="676" key="search.everywhere.popup/0.25.1680.965@0.25.1680.965" timestamp="1616156191063" />
     <state x="505" y="237" width="670" height="676" key="search.everywhere.popup/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616413651969" />
   </component>

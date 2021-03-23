@@ -33,5 +33,9 @@ class TransactionListFragment : Fragment() {
         viewModel.transactions.observe(viewLifecycleOwner) { transitions ->
             binding.transactionList.adapter = TransactionListAdapter(transitions)
         }
+
+        binding.fab.setOnClickListener {
+            findNavController().navigate(R.id.action_TransactionListFragment_to_TransactionDetailFragment)
+        }
     }
 }
