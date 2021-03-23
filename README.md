@@ -1,5 +1,8 @@
 
-# FlowAccount Challenges
+# FlowAccount Challenges (The Pouch Application)
+
+### 1. Introduction
+Pouch is an personal expenses tracking application with an intuitive UI showing all transactions as a list of card view.
 
 ## Typescript Node
 
@@ -56,11 +59,9 @@ What we evaluate you on:
 
 ## iOS
 
-## Android
-### 1. Introduction
-Pouch is an personal expenses tracking application with an intuitive UI showing all transactions as a list of card view. 
+## Android (Transaction CRUD)
 
-### 2. What you'll build
+### 1. What you'll build
 In this exam, you'll build some new features from existing project.
 Requirements:
  - create new transaction page.
@@ -68,7 +69,7 @@ Requirements:
  - search transaction from transaction list.
  - sort transactions from transaction list.
 
-### 3. What are we concern
+### 2. What are we concern
 - separation of concerns
 - android architecture component
 - material design
@@ -77,7 +78,7 @@ Requirements:
 - defensive programming
 - algorithm
 
-### 4. Requirement
+### 3. Requirement
 create new transaction screen design.
 
 ![Screen Shot 2564-03-23 at 16 03 28](https://user-images.githubusercontent.com/60771871/112121279-a82f8d80-8bf1-11eb-914e-1b7a13e63b7a.png)
@@ -104,5 +105,28 @@ create new transaction screen design.
 5. you can design your own layout.
 
 ### Bonus
-1. Unit test and UI test is a plus.
-2. There's some mistakes in the code structure and we will be pleasured if you can correct them.
+1. There's some mistakes in the code structure and we will be pleasured if you can correct them.
+
+## Android (Categories Tree Count)
+The categoris for transactions (income/expense) are multilevel categories
+example:
+
+```
+├── Entertainment
+                 ├── Office Dinner
+                 ├── Client Meeting
+                 ├── Team activies
+                                  ├── Movies
+                                  ├── After work party
+                                                     ├── (n*x)
+```                                                  
+
+The callenge is:
+1. Define a model for this unlimited level of categories in the front-end
+2. Write an algorithm to count the number of all the parents and childrent categories using `Entertainment` tree as your mock data
+
+Output: 
+1. Model that works
+2. Function that show the `TOTAL` count of the categories
+3. Test Driven Design
+4. Clean and understandable code
