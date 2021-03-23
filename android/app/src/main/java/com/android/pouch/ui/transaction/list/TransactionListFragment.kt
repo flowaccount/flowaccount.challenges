@@ -10,32 +10,28 @@ import android.widget.Button
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.android.pouch.R
+import com.android.pouch.databinding.FragmentTransactionListBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class TransactionListFragment : Fragment() {
 
     private val viewModel: TransactionListViewModel by viewModels()
+    private lateinit var binding: FragmentTransactionListBinding
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_transaction_list, container, false)
+    ): View {
+        binding = FragmentTransactionListBinding.inflate(LayoutInflater.from(context), container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.button_first).setOnClickListener {
-            findNavController().navigate(R.id.action_TransactionListFragment_to_TransactionDetailFragment)
-        }
-
         viewModel.transactions.observe(viewLifecycleOwner) { transitions ->
-            transitions.forEach { transaction ->
-                Log.d("test", "${transaction}")
-            }
+            binding.transactionList.adapter = TransactionListAdapter(transitions)
         }
     }
 }

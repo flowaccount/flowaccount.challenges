@@ -1,8 +1,9 @@
 package com.android.pouch.ui.transaction.list
 
-import android.view.View
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.android.pouch.databinding.ItemTransactionBinding
 import com.android.pouch.entity.Transaction
 
 class TransactionListAdapter(
@@ -10,18 +11,24 @@ class TransactionListAdapter(
 ): RecyclerView.Adapter<TransactionListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("Not yet implemented")
+        val binding = ItemTransactionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.bind(dataSet[position])
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return dataSet.size
     }
 
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    class ViewHolder(private val binding: ItemTransactionBinding): RecyclerView.ViewHolder(binding.root) {
 
+        fun bind(model: Transaction) {
+            binding.transactionDate.text = model.id.toString()
+            binding.transactionCategory.text = model.category
+            binding.transactionAmount.text = model.amount.toString()
+        }
     }
 }

@@ -10,8 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="569ed4aa-fdcc-4031-a46b-551fd4b7b2cc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/transaction/list/TransactionListAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/transaction/list/TransactionListAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/transaction/list/TransactionListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/pouch/ui/transaction/list/TransactionListFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_transaction_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_transaction_list.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,25 +178,25 @@
       <screen x="0" y="25" width="1680" height="964" />
     </state>
     <state x="428" y="266" key="AndroidCreateResourceFileDialog/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616414394135" />
-    <state width="1636" height="257" key="GridCell.Tab.0.bottom" timestamp="1616476249102">
+    <state width="1636" height="257" key="GridCell.Tab.0.bottom" timestamp="1616477942233">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state width="1636" height="257" key="GridCell.Tab.0.bottom/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616476249102" />
+    <state width="1636" height="257" key="GridCell.Tab.0.bottom/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616477942233" />
     <state width="1636" height="257" key="GridCell.Tab.0.bottom/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616415981062" />
-    <state width="1636" height="257" key="GridCell.Tab.0.center" timestamp="1616476249101">
+    <state width="1636" height="257" key="GridCell.Tab.0.center" timestamp="1616477942232">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state width="1636" height="257" key="GridCell.Tab.0.center/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616476249101" />
+    <state width="1636" height="257" key="GridCell.Tab.0.center/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616477942232" />
     <state width="1636" height="257" key="GridCell.Tab.0.center/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616415981062" />
-    <state width="1636" height="257" key="GridCell.Tab.0.left" timestamp="1616476249100">
+    <state width="1636" height="257" key="GridCell.Tab.0.left" timestamp="1616477942231">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state width="1636" height="257" key="GridCell.Tab.0.left/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616476249100" />
+    <state width="1636" height="257" key="GridCell.Tab.0.left/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616477942231" />
     <state width="1636" height="257" key="GridCell.Tab.0.left/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616415981061" />
-    <state width="1636" height="257" key="GridCell.Tab.0.right" timestamp="1616476249101">
+    <state width="1636" height="257" key="GridCell.Tab.0.right" timestamp="1616477942232">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
-    <state width="1636" height="257" key="GridCell.Tab.0.right/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616476249101" />
+    <state width="1636" height="257" key="GridCell.Tab.0.right/-1920.25.1920.1055/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616477942232" />
     <state width="1636" height="257" key="GridCell.Tab.0.right/1680.25.1920.1055/-1920.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1616415981062" />
     <state width="1636" height="257" key="GridCell.Tab.1.bottom" timestamp="1616415981064">
       <screen x="0" y="25" width="1680" height="964" />
