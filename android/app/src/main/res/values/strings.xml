@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Pouch</string>
+    <string name="action_sort">Sort</string>
+    <string name="action_search">Search</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="transaction_list_fragment_label">Transaction List Fragment</string>
+    <string name="transaction_detail_fragment_label">Transaction Detail Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_transaction_list_fragment">Hello Transaction List fragment</string>
+    <string name="hello_transaction_detail_fragment">Hello Transaction Detail fragment. Arg: %1$s</string>
+</resources>

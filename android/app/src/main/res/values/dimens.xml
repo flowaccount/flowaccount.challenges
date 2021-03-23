@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="horizontal_margin">8dp</dimen>
+    <dimen name="vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_corner">4dp</dimen>
+    <dimen name="item_transaction_title">36sp</dimen>
+    <dimen name="item_transaction_subtitle">18sp</dimen>
+    <dimen name="item_transaction_body">14sp</dimen>
+    <dimen name="item_transaction_vertical_space">32dp</dimen>
+</resources>
