@@ -12,9 +12,6 @@ import androidx.navigation.fragment.findNavController
 import com.android.pouch.R
 import dagger.hilt.android.AndroidEntryPoint
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
 @AndroidEntryPoint
 class TransactionListFragment : Fragment() {
 

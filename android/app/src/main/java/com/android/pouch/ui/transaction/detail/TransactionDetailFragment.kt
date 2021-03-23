@@ -9,9 +9,6 @@ import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.android.pouch.R
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
 class TransactionDetailFragment : Fragment() {
 
     override fun onCreateView(
