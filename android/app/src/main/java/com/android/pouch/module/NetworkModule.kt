@@ -4,6 +4,7 @@ import com.android.pouch.BuildConfig
 import com.android.pouch.repository.ITransactionRepository
 import com.android.pouch.repository.TransactionRepository
 import com.android.pouch.repository.service.TransactionService
+import com.google.gson.GsonBuilder
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -26,8 +27,11 @@ object NetworkModule {
 
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
+        val gson = GsonBuilder()
+                .setLenient()
+                .create()
         return Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .baseUrl(BuildConfig.BASE_URL)
             .client(okHttpClient)
             .build()

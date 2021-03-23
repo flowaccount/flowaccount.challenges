@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Pouch</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_sort">Sort</string>
+    <string name="action_search">Search</string>
     <!-- Strings used for fragments for navigation -->
     <string name="transaction_list_fragment_label">Transaction List Fragment</string>
     <string name="transaction_detail_fragment_label">Transaction Detail Fragment</string>

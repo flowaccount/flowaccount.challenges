@@ -34,7 +34,7 @@ class TransactionListFragment : Fragment() {
 
         viewModel.transactions.observe(viewLifecycleOwner) { transitions ->
             transitions.forEach { transaction ->
-                Log.d("test", "amount : ${transaction.amount}")
+                Log.d("test", "${transaction}")
             }
         }
     }
