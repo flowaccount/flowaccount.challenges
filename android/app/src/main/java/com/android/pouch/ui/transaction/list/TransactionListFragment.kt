@@ -36,7 +36,7 @@ class TransactionListFragment : ProgressableFragment() {
             binding.transactionList.adapter = TransactionListAdapter(transitions)
         }
 
-        binding.fab.setOnClickListener {
+        binding.createTransactionFab.setOnClickListener {
             findNavController().navigate(R.id.action_TransactionListFragment_to_TransactionDetailFragment)
         }
     }

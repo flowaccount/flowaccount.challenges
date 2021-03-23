@@ -1,0 +1,75 @@
+{
+  "status": true,
+  "data": [
+    {
+      "id": 1,
+      "type": 3,
+      "category": "food",
+      "amount": 200.00,
+      "createdAt": "2021-03-10 12:30:00"
+    },
+    {
+      "id": 2,
+      "type": 1,
+      "category": "salary",
+      "amount": 500.00,
+      "createdAt": "2021-03-11 04:00:00"
+    },
+    {
+      "id": 3,
+      "type": 3,
+      "category": "rent",
+      "amount": 300.00,
+      "createdAt": "2021-03-12 09:30:00"
+    },
+    {
+      "id": 4,
+      "type": 3,
+      "category": "food",
+      "amount": 200.00,
+      "createdAt": "2021-03-13 12:30:00"
+    },
+    {
+      "id": 5,
+      "type": 1,
+      "category": "salary",
+      "amount": 500.00,
+      "createdAt": "2021-03-14 04:00:00"
+    },
+    {
+      "id": 6,
+      "type": 3,
+      "category": "rent",
+      "amount": 300.00,
+      "createdAt": "2021-03-15 09:30:00"
+    },
+    {
+      "id": 7,
+      "type": 3,
+      "category": "food",
+      "amount": 200.00,
+      "createdAt": "2021-03-16 12:30:00"
+    },
+    {
+      "id": 8,
+      "type": 1,
+      "category": "salary",
+      "amount": 500.00,
+      "createdAt": "2021-03-17 04:00:00"
+    },
+    {
+      "id": 9,
+      "type": 3,
+      "category": "rent",
+      "amount": 300.00,
+      "createdAt": "2021-03-18 09:30:00"
+    },
+    {
+      "id": 10,
+      "type": 3,
+      "category": "food",
+      "amount": 200.00,
+      "createdAt": "2021-03-19 12:30:00"
+    }
+  ]
+}

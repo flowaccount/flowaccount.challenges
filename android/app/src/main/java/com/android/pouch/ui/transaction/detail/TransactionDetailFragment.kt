@@ -9,6 +9,7 @@ import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.android.pouch.R
 
+
 class TransactionDetailFragment : Fragment() {
 
     override fun onCreateView(
