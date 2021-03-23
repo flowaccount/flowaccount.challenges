@@ -57,3 +57,26 @@ What we evaluate you on:
 ## iOS
 
 ## Android
+### 1. Introduction
+Pouch is an personal expenses tracking application with an intuitive UI showing all transactions as a list of card view. 
+
+### 2. What you'll build
+In this exam, you'll build some new features from existing project.
+Requirements:
+ - create new transaction page.
+ - edit transaction page.
+ - search transaction from transaction list.
+ - sort transactions from transaction list.
+
+### 3. What are we concern
+- separation of concerns
+- android architecture component
+- material design
+- test driven development
+- design pattern
+- defensive programming
+- algorithm
+
+### 4. Requirement
+create new transaction screen design.
+![Screen Shot 2564-03-23 at 16 03 28](https://user-images.githubusercontent.com/60771871/112121279-a82f8d80-8bf1-11eb-914e-1b7a13e63b7a.png)
