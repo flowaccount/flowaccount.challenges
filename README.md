@@ -79,4 +79,30 @@ Requirements:
 
 ### 4. Requirement
 create new transaction screen design.
+
 ![Screen Shot 2564-03-23 at 16 03 28](https://user-images.githubusercontent.com/60771871/112121279-a82f8d80-8bf1-11eb-914e-1b7a13e63b7a.png)
+
+### Create Transaction screen will has the following requirements
+1. User can add an amount.
+2. User has to do nothing with label
+3. User can select his transaction type (spinner).
+4. User can select his transaction category (category spinner shows all existing category from the transaction list).
+5. If user want to create new category, then he can manually type his new category by just clicking the category name (click the down arrow will show all categories in the spinner).
+6. User can select his transaction date (calendar view).
+7. User can manually add his own transaction note.
+8. Transaction amount is a require field and must be only number.
+9. Transaction category is a require field.
+10. Transaction note is an optional field with maximum 100 characters length.
+11. The validation will be triggered interactively with user's input.
+12. After successfully created new transaction, application must save the transaction into app's database (sqlite) and navigate back to transaction list screen.
+
+### Transaction list screen will also has the following requirements
+1. transaction list must show both transactions from remote API and local Database.
+2. you must implement your own search function (cannot use android class).
+3. you must implement your own sort function (cannot use android class).
+4. both search and sort function must work perfectly.
+5. you can design your own layout.
+
+### Bonus
+1. Unit test and UI test is a plus.
+2. There's some mistakes in the code structure and we will be pleasured if you can correct them.
