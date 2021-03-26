@@ -10,8 +10,6 @@ export class VpcStack extends Stack {
 
   readonly vpc: Vpc
 
-  readonly subnets: Subnet[]
-
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props)
 
@@ -39,20 +37,11 @@ export class VpcStack extends Stack {
       Tags.of(_subnetPrivateItem).add("Name", `private-${_subnetPrivateItem.availabilityZone}`)
       _subnetCidrBlockCount++
     })
-
-    let _subnetObject: Subnet
-
-    environment.subnets.forEach(_subnet => {
-      this.vpc.availabilityZones.forEach(_az => {
-
-        _subnetObject = new Subnet(this, `${_subnet.name}-${_az}`, {
-          vpcId: this.vpc.vpcId,
-          cidrBlock: `${process.env.VPC_CIDR_PREFIX}.${_subnetCidrBlockCount}.0/${process.env.SUBNET_MASK}`,
-          availabilityZone: _az
-        })
-        Tags.of(_subnetObject).add("Name", `${_subnet.name}-${_az}`)
-        _subnetCidrBlockCount++
-      })
+    
+    const _subnetIsolateList = this.vpc.isolatedSubnets
+    _subnetIsolateList.forEach(_subnetIsolateItem => {
+      Tags.of(_subnetIsolateItem).add("Name", `isolate-${_subnetIsolateItem.availabilityZone}`)
+      _subnetCidrBlockCount++
     })
 
     //#endregion
