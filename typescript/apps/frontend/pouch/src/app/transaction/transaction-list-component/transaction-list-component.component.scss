@@ -1,3 +1,4 @@
+
 .renew-companyId_head {
     width: 15% !important;
     max-width: 130px;
@@ -13,5 +14,27 @@ ngx-datatable {
       .input-group-sm input {
         width: 100px;
       }
+    }
+}
+
+.section-1 {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .left-div {
+        display: flex;
+        .summary-box {
+            padding: 0px 55px 0px 15px;
+            .title {
+                font-size: 13px;
+            }
+            .amount {
+                font-size: 32px;
+            }
+        }
+        .summary-box:not(:last-child){
+            border-right: 1px solid black;
+        }
     }
 }
