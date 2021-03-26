@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,26 +25,26 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eeZ-ZD-Yef">
-                                <rect key="frame" x="0.0" y="80" width="414" height="782"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="80" width="414" height="816"/>
+                                <color key="backgroundColor" name="GrayBG"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3CN-nW-NQa">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="16"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mwR-qO-D4X"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="GrayBG"/>
                         <constraints>
                             <constraint firstItem="aHI-pE-nA8" firstAttribute="leading" secondItem="mwR-qO-D4X" secondAttribute="leading" id="J4D-Wf-ndj"/>
                             <constraint firstItem="eeZ-ZD-Yef" firstAttribute="leading" secondItem="mwR-qO-D4X" secondAttribute="leading" id="O6r-Wr-sdH"/>
                             <constraint firstItem="aHI-pE-nA8" firstAttribute="top" secondItem="QmL-s9-Lir" secondAttribute="top" id="Ppm-o5-R54"/>
                             <constraint firstItem="mwR-qO-D4X" firstAttribute="trailing" secondItem="eeZ-ZD-Yef" secondAttribute="trailing" id="RaH-6X-nl5"/>
                             <constraint firstItem="eeZ-ZD-Yef" firstAttribute="top" secondItem="aHI-pE-nA8" secondAttribute="bottom" id="b3X-0g-spm"/>
-                            <constraint firstItem="mwR-qO-D4X" firstAttribute="bottom" secondItem="eeZ-ZD-Yef" secondAttribute="bottom" id="ggY-6a-ZKx"/>
+                            <constraint firstAttribute="bottom" secondItem="eeZ-ZD-Yef" secondAttribute="bottom" id="ggY-6a-ZKx"/>
                             <constraint firstItem="mwR-qO-D4X" firstAttribute="trailing" secondItem="aHI-pE-nA8" secondAttribute="trailing" id="xKf-Ch-1RR"/>
                         </constraints>
                     </view>
@@ -59,11 +58,11 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="GrayBG">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.97000002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="baseApp">
             <color red="0.01981692761" green="0.47706383470000002" blue="0.99508565660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
