@@ -16,5 +16,4 @@ class TransactionListController: BaseViewController {
         super.viewDidLoad()
     }
     
-    
 }
