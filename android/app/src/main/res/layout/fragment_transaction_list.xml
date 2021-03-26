@@ -6,20 +6,24 @@
     android:layout_height="match_parent"
     android:paddingStart="@dimen/horizontal_margin"
     android:paddingEnd="@dimen/horizontal_margin"
-    android:paddingTop="@dimen/vertical_margin"
-    android:paddingBottom="@dimen/vertical_margin"
     android:background="@color/white"
     tools:context=".ui.transaction.list.TransactionListFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/transaction_list"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_to_refresh"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/transaction_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/create_transaction_fab"

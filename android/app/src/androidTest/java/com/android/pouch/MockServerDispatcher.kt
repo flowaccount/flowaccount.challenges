@@ -5,7 +5,6 @@ import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.RecordedRequest
 import java.io.InputStreamReader
 
-
 class MockServerDispatcher {
     /**
      * Return ok response from mock server
@@ -13,8 +12,7 @@ class MockServerDispatcher {
     internal inner class RequestDispatcher : Dispatcher() {
         override fun dispatch(request: RecordedRequest): MockResponse {
             return when (request.path) {
-                "/fixtures" -> MockResponse().setResponseCode(200).setBody(getJsonContent("fixtures_feed.json"))
-                "/news" -> MockResponse().setResponseCode(200).setBody(getJsonContent("news_response.json"))
+                "/transactions" -> MockResponse().setResponseCode(200).setBody(getJsonContent("transactions.json"))
                 else -> MockResponse().setResponseCode(400)
             }
         }
