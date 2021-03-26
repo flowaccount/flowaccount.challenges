@@ -26,6 +26,20 @@ export const environment = {
         ]
     },
     subnets: [
-        { name: "database" }
-    ]
+        { 
+            name: "database" 
+        }
+    ],
+    rds: {
+        username: "new",
+        password: "password",
+        availabilityZone: "availabilityZone",
+        multiAz: true,
+        instanceIdentifier: "instanceIdentifier",
+        engineVersion: "",
+        allowMajorVersionUpgrade: true,
+        autoMinorVersionUpgrade: true,
+        dbSize: 100,
+        deletionProtection: true
+    }
 }

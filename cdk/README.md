@@ -12,3 +12,4 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
  * `yarn cdk-fadev deploy`      deploy this stack to fadev AWS account/region
  * `yarn cdk-fadev diff`        compare deployed stack with current state
  * `yarn cdk-fadev synth`       emits the synthesized CloudFormation template
+ * `yarn add @aws-cdk/aws-rds@1.94.1`     add aws rds
