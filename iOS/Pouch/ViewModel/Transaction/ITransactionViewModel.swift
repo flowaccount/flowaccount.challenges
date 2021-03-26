@@ -8,5 +8,6 @@
 import Foundation
 
 protocol ITransactionViewModel {
-    func getList()
+    func getBalance() -> String
+    func getUserName() -> String
 }

@@ -1,5 +1,5 @@
 //
-//  Transaction.swift
+//  Summary.swift
 //  Pouch
 //
 //  Created by Narong Kanthanu on 26/3/2564 BE.
@@ -8,22 +8,20 @@
 import Foundation
 import ObjectMapper
 
-class Transaction: NSObject, NSCoding, Mappable {
+class Summary: NSObject, NSCoding, Mappable {
     
     var id: Int = 0
-    var imageUrl: String = ""
-    var type: TransactionType = .expense
-    var category: String = ""
-    var price: Double = 0.0
+    var totalIncome: Double = 0.0
+    var totalExpense: Double = 0.0
+    var balance: Double = 0.0
     var createdDate: Data = Data()
     var updatedDate: Date = Date()
     
     func mapping(map: Map) {
         id <- map["id"]
-        imageUrl <- map["imageUrl"]
-        type <- map["type"]
-        category <- map["category"]
-        price <- map["price"]
+        totalIncome <- map["totalIncome"]
+        totalExpense <- map["totalExpense"]
+        balance <- map["balance"]
         createdDate <- map["createdDate"]
         updatedDate <- map["updatedDate"]
     }
@@ -48,4 +46,3 @@ class Transaction: NSObject, NSCoding, Mappable {
         self.init(JSON: data)
     }
 }
-

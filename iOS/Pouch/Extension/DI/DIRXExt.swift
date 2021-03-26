@@ -7,12 +7,14 @@
 
 import Foundation
 import Swinject
+import RxSwift
+import RxCocoa
 
 extension Container {
     func registerRXManager() {
-        self.register(RXPublishSubjectManager<Int>.self) { _ in
-            let delegate = UIApplication.shared.delegate as! AppDelegate
-            return RXPublishSubjectManager(publishSubject: delegate.publishSubject)
+        self.register(RXPublishSubjectManager<[Transaction]>.self) { (_) in
+            let transaction = PublishSubject<[Transaction]>()
+            return RXPublishSubjectManager(publishSubject: transaction)
         }
     }
 }
