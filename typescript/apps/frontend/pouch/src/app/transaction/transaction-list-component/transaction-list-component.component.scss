@@ -58,6 +58,36 @@ ngx-datatable {
             width: 160px;
             height: 40px;
             font-size: 18px;
+            border-radius: 8px;
+        }
+    }
+}
+
+.section-2 {
+    display: flex;
+    justify-content: space-between;
+    .left-div {
+        display: flex;
+        
+        .item-div {
+            .title {
+                font-size: 13px;
+            }
+        }
+        .item-div:not(.last-child) {
+            margin-right: 28px;
+        }
+    }
+    .right-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        button {
+            width: 140px;
+            height: 32px;
+            font-size: 15px;
+            border-radius: 8px;
         }
     }
 }
