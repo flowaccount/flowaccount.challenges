@@ -62,33 +62,25 @@
             <option value="3">Three</option>
           </select>
         </div>
-
-      </div>
-
-      <div class="right-div">
-        <div>
-          <button class="btn btn-primary">Go</button>
-        </div>
-      </div>
-  </div>
-
-  <div class="section-3">
-    <div id="transaction-list-div">
-        <div class="transaction-head">
-            <div>Income/Expense</div>
-            <div>Date</div>
-            <div>Category</div>
-            <div class="text-right">Amount</div>
-            <div>&nbsp;</div> 
-        </div>
-        <div class="transaction-row-div">
-            <div *ngFor="let row of rows"> 
-                <div class="transaction-row" >
-                    <div>{{ row.type }}</div>
-                    <div>{{ row.transactionDate }}</div>
-                    <div>{{ row.categoryId  }}</div>
-                    <div class="text-right">{{ row.value }}</div>
-                    <div class="text-center">A S</div>
+    </div>
+    <div class="section-3">
+        <div id="transaction-list-div">
+            <div class="transaction-head">
+                <div>Income/Expense</div>
+                <div>Date</div>
+                <div>Category</div>
+                <div class="text-right">Amount</div>
+                <div>&nbsp;</div> 
+            </div>
+            <div class="transaction-row-div">
+                <div *ngFor="let row of rows"> 
+                    <div class="transaction-row" >
+                        <div>{{ row.type }}</div>
+                        <div>{{ row.transactionDate }}</div>
+                        <div>{{ row.categoryId }}</div>
+                        <div class="text-right">{{ row.value }}</div>
+                        <div class="text-center"><i class="fas fa-pencil-alt"></i>&nbsp;&nbsp;<i class="fas fa-trash"></i></div>
+                    </div>
                 </div>
             </div>
         </div>
