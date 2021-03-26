@@ -11,21 +11,21 @@ import RxSwift
 
 class RXPublishSubjectManager<T> {
     
-    let publishSubject: PublishSubject<T>
-    var subscribe: Disposable!
+    private let publishSubject: PublishSubject<T>
+    private var subscribe: Disposable!
     
     init(publishSubject: PublishSubject<T>) {
         self.publishSubject = publishSubject
     }
     
-    func addApiConnectionSubscribe(completionHandler: @escaping (T) -> Void) {
-       subscribe = publishSubject.asObserver()
+    func addSubscribe(completionHandler: @escaping (T) -> Void) {
+        subscribe = publishSubject.asObserver()
             .subscribe { (value: T) in
                 completionHandler(value)
             }
     }
     
-    func removeApiConnectionSubscribe() {
+    func removeSubscribe() {
         subscribe.dispose()
     }
     

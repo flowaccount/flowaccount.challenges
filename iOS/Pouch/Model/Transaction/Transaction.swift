@@ -28,6 +28,10 @@ class Transaction: NSObject, NSCoding, Mappable {
         updatedDate <- map["updatedDate"]
     }
     
+    override init() {
+        // unimplement
+    }
+    
     required init?(map: Map) {
         // unimplement
     }

@@ -10,8 +10,11 @@ import Swinject
 
 extension Container {
     func registerViewModel() {
-//        self.register(GalleryViewModel.self) { _ in
-//            return GalleryViewModel(model: GalleryModel(), service: FlowAccountService.sharedInstance.autoKey)
-//        }
+        self.register(TransactionViewModel.self) { (r) in
+            return TransactionViewModel(apiService: r.resolve(TransactionAPI.self)!, rx: r.resolve(RXPublishSubjectManager<[Transaction]>.self)!)
+        }
+        self.register(SummaryViewModel.self) { (r) in
+            return SummaryViewModel(model: r.resolve(Summary.self)!, apiService: r.resolve(TransactionAPI.self)!)
+        }
     }
 }

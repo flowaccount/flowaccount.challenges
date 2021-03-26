@@ -10,9 +10,12 @@ import Swinject
 
 extension Container {
     func registerModel() {
-//        self.register(GalleryViewModel.self) { _ in
-//            return GalleryViewModel(model: GalleryModel(), service: FlowAccountService.sharedInstance.autoKey)
-//        }
+        self.register(Transaction.self) { (_) in
+            return Transaction()
+        }
+        self.register(Summary.self)  { (_) in
+            return Summary()
+        }
     }
 }
 
