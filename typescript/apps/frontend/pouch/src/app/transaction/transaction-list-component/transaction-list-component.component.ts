@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { threadId } from 'worker_threads';
 import { TransactionApiService } from '../transaction-api-service.service';
 import { TransactionModel } from '@typescript/shared/models'
 

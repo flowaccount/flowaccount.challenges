@@ -5,6 +5,8 @@ import { TransactionFormComponentComponent } from './transaction-form-component/
 import { TransactionRoutingModule } from './transaction-routing.module';
 import { TransactionApiService } from './transaction-api-service.service';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable'
+import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -13,10 +15,14 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable'
   imports: [
     CommonModule,
     TransactionRoutingModule,
-    NgxDatatableModule
+    NgxDatatableModule,
+    HttpClientModule,
+    HttpClientXsrfModule,
   ],
   providers:[
-    TransactionApiService
+    TransactionApiService,
+    HttpClientModule,
+
   ]
 })
 export class TransactionModule { }
