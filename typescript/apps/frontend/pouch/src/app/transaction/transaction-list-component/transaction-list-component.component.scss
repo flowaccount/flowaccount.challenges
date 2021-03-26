@@ -1,4 +1,16 @@
+@import '../../../assets/scss/abstracts/_variables';
 
+.green{
+    color:#00bf3b;
+}
+
+.red{
+    color:#f2525d;
+}
+
+.blue{
+    color:#3077eb;
+}
 .renew-companyId_head {
     width: 15% !important;
     max-width: 130px;
@@ -18,13 +30,13 @@ ngx-datatable {
 }
 
 .section-1 {
-    background-color: aliceblue;
+    background-color: #fcfcfc;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     .left-div {
         display: flex;
-        .summary-box {
+        .flex-item-div{
             padding: 0px 55px 0px 15px;
             .title {
                 font-size: 13px;
@@ -33,8 +45,19 @@ ngx-datatable {
                 font-size: 32px;
             }
         }
-        .summary-box:not(:last-child){
-            border-right: 1px solid black;
+        .flex-item-div:not(:last-child){
+            border-right: 1px solid #e6e9ee;
+        }
+    }
+    .right-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        button {
+            width: 160px;
+            height: 40px;
+            font-size: 18px;
         }
     }
 }
