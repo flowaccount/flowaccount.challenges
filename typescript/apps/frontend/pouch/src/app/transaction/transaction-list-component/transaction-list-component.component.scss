@@ -62,7 +62,33 @@
     }
     .section-3{
         #transaction-list-div{
-        
+            .transaction-head,
+            .transaction-row{
+                $w1: 220px;
+                $w2: 110px;
+                $w4: 120px;
+                $w5: 120px;
+                $w3: $w1 + $w2 + $w4 + $w5;
+                display: table;
+                > div {
+                    display: table-cell;
+                }
+                > div:nth-child(1){
+                    width: $w1;
+                }
+                > div:nth-child(2){
+                    width: $w2;
+                }
+                > div:nth-child(3){
+                    width: calc(100vw - #{$w3});
+                }
+                > div:nth-child(4){
+                    width: $w4
+                }
+                > div:nth-child(5){
+                    width: $w5;
+                }
+            }
         }
     } 
  }
