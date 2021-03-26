@@ -37,9 +37,13 @@
     .section-2 {
         display: flex;
         justify-content: space-between;
+        margin-top: 20px;
+        border: 1px solid #e6e9ee;
+        padding: 15px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
         .left-div {
             display: flex;
-            
             .item-div {
                 .title {
                     font-size: 13px;
