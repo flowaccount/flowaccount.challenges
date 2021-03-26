@@ -1,96 +1,70 @@
-@import '../../../assets/scss/abstracts/_variables';
-
-.green{
-    color:#00bf3b;
-}
-
-.red{
-    color:#f2525d;
-}
-
-.blue{
-    color:#3077eb;
-}
-.renew-companyId_head {
-    width: 15% !important;
-    max-width: 130px;
-    font-family: 'cs_chatthaiuiregular', sans-serif;
-    font-size: 15px !important;
-    line-height: 1.53em !important;
-    // padding: 0 !important;
-  }
-
-ngx-datatable {
-    datatable-header-cell.renew-companyId_head {
-      padding-left: 5px !important;
-      .input-group-sm input {
-        width: 100px;
-      }
-    }
-}
-
-.section-1 {
-    background-color: #fcfcfc;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .left-div {
+ #transaction-list-page{
+    .section-1 {
+        background-color: #fcfcfc;
         display: flex;
-        .flex-item-div{
-            padding: 0px 55px 0px 15px;
-            .title {
-                font-size: 13px;
+        flex-direction: row;
+        justify-content: space-between;
+        .left-div {
+            display: flex;
+            .flex-item-div{
+                padding: 0px 55px 0px 15px;
+                .title {
+                    font-size: 13px;
+                }
+                .amount {
+                    font-size: 32px;
+                }
             }
-            .amount {
-                font-size: 32px;
+            .flex-item-div:not(:last-child){
+                border-right: 1px solid #e6e9ee;
             }
         }
-        .flex-item-div:not(:last-child){
-            border-right: 1px solid #e6e9ee;
+        .right-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            button {
+                width: 160px;
+                height: 40px;
+                font-size: 18px;
+                border-radius: 8px;
+            }
+        }
+    } 
+    .section-2 {
+        display: flex;
+        justify-content: space-between;
+        .left-div {
+            display: flex;
+            
+            .item-div {
+                .title {
+                    font-size: 13px;
+                }
+            }
+            .item-div:not(.last-child) {
+                margin-right: 28px;
+            }
+        }
+        .right-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            button {
+                width: 140px;
+                height: 32px;
+                font-size: 15px;
+                border-radius: 8px;
+            }
         }
     }
-    .right-div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        button {
-            width: 160px;
-            height: 40px;
-            font-size: 18px;
-            border-radius: 8px;
-        }
-    }
-}
-
-.section-2 {
-    display: flex;
-    justify-content: space-between;
-    .left-div {
-        display: flex;
+    .section-3{
+        #transaction-list-div{
         
-        .item-div {
-            .title {
-                font-size: 13px;
-            }
         }
-        .item-div:not(.last-child) {
-            margin-right: 28px;
-        }
-    }
-    .right-div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        button {
-            width: 140px;
-            height: 32px;
-            font-size: 15px;
-            border-radius: 8px;
-        }
-    }
-}
-#transaction-list-div{
-    
-}
+    } 
+ }
+
+ 
