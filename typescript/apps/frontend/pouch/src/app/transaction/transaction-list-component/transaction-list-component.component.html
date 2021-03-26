@@ -29,12 +29,14 @@
         </div>
     </div>
     <ngx-datatable
-        class="ngx-datatable material fullscreen ngx-basic-style">
+        [rows]="rows"
+        class="material">
         <ngx-datatable-column headerClass="renew-transaction" cellClass="renew-companyId">
             <ng-template let-renew="column" ngx-datatable-header-template>
               <div class="head">Income/Expense</div>
             </ng-template>
             <ng-template let-renew="row" ngx-datatable-cell-template>
+                {{ row.type  }}
             </ng-template>
           </ngx-datatable-column>
 
@@ -43,6 +45,7 @@
               <div class="head">Date</div>
             </ng-template>
             <ng-template let-renew="row" ngx-datatable-cell-template>
+                {{ row.date }}
             </ng-template>
           </ngx-datatable-column>
 
@@ -51,6 +54,7 @@
               <div class="head">Catagory</div>
             </ng-template>
             <ng-template let-renew="row" ngx-datatable-cell-template>
+                {{ row.categoryId }}
             </ng-template>
           </ngx-datatable-column>
 
@@ -59,6 +63,7 @@
               <div class="head">Amount</div>
             </ng-template>
             <ng-template let-renew="row" ngx-datatable-cell-template>
+                {{ row.value}}
             </ng-template>
           </ngx-datatable-column>
 
