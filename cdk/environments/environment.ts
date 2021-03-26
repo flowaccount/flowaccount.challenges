@@ -27,5 +27,17 @@ export const environment = {
     },
     subnets: [
         { name: "database" }
-    ]
+    ],
+
+    cluster: {
+        clusterName: "pounch-cluster",
+        policyName: "ecs-pouch-cluster-policy",
+        roleName: "ecs-pouch-cluster-role",
+        instanceProfileName: "ecs-pouch-instance-profile",
+        securityGroupName: `production-linux-revise-cluster-sg`,
+        ecsLaunchTemplate : {name : `linux-cpu2mem1-production`, instanceType: `t3.micro` , keyName : `flowsingapore`},
+        autoScalingGroupName: `pouch-ecs-linux-cpu2mem1-asg`,
+    }
 }
+
+ 
