@@ -1,6 +1,7 @@
 import * as dotenv from "dotenv"
-import { Protocol, SubnetType } from "@aws-cdk/aws-ec2"
+import { InstanceClass, InstanceSize, InstanceType, Protocol, SubnetType } from "@aws-cdk/aws-ec2"
 import { ListenerCondition } from "@aws-cdk/aws-elasticloadbalancingv2"
+import { DatabaseInstanceEngine, SqlServerEngineVersion } from "@aws-cdk/aws-rds"
 
 dotenv.config()
 
@@ -23,12 +24,14 @@ export const environment = {
                 name: "private",
                 subnetType: SubnetType.PRIVATE,
                 cidrMask: Number(process.env.SUBNET_MASK as string)
+            },
+            {
+                name: "isolate",
+                subnetType: SubnetType.ISOLATED,
+                cidrMask: Number(process.env.SUBNET_MASK as string)
             }
         ]
     },
-    subnets: [
-        { name: "database" }
-    ],
     route53: {
         zoneName: `${process.env.DOMAIN}`,
         hostedZoneId: "Z1YG5PTYO483CG",
@@ -71,5 +74,13 @@ export const environment = {
                 name: "api-pouch-tg"
             }
         }
-    ]
+    ],
+    rds: {
+        username: "pouchMaster",
+        instanceType: InstanceType.of(InstanceClass.T3, InstanceSize.SMALL),
+        instanceIdentifier: "pouch-db",
+        engine: DatabaseInstanceEngine.sqlServerEx({ version: SqlServerEngineVersion.VER_15}),
+        dbSize: 50,
+        deletionProtection: true
+    }
 }
