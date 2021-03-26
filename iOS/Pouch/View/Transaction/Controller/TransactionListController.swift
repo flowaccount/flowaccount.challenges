@@ -37,11 +37,20 @@ extension TransactionListController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RawCell.summaryCell, for: indexPath) as! TransactionSummaryCell
-        return cell
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RawCell.summaryCell, for: indexPath) as! TransactionSummaryCell
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RawCell.detailCell, for: indexPath) as! TransactionDetailCell
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 120)
+        if indexPath.row == 0 {
+            return CGSize(width: collectionView.frame.width, height: 120)
+        } else {
+            return CGSize(width: collectionView.frame.width, height: 156)
+        }
     }
 }
