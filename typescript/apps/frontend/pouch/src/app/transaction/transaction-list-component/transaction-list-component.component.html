@@ -114,13 +114,12 @@
             </div>
             <div class="transaction-row-div">
     
-                <div class="transaction-row">
-                    <div>A1</div>
-                    <div>A2</div>
-                    <div>A3</div>
-                    <div>A4</div>
-                    <div>A5</div>
-                    <div>A6</div>
+                <div class="transaction-row" *ngFor="let row of rows">
+                    <div>{{ row.type }}</div>
+                    <div>{{ row.date }}</div>
+                    <div>{{ row.categoryId  }}</div>
+                    <div>{{ row.value }}</div>
+                    <div>{{ A5}}</div>
                 </div>
             </div>
         </div>
