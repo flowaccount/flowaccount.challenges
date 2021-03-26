@@ -25,6 +25,7 @@
     "frontend-pouch-e2e": {
       "tags": [],
       "implicitDependencies": ["frontend-pouch"]
-    }
+    },
+    "shared-models": { "tags": [] }
   }
 }
