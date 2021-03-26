@@ -1,14 +1,14 @@
 import { TransactionType } from "../enums/transaction.enum"
 
 export class TransactionModel{
-    CategoryId :number
-    TransactionDate :Date
-    Name:string
-    Type: TransactionType
-    Value:number
-    IsDelete: boolean
-    Status :number
-    Note:string
-    CreatedOn:Date
-    ModifiedOn:Date
+    categoryId :number
+    transactionDate :Date
+    name:string
+    type: TransactionType
+    value:number
+    isDelete: boolean
+    status :number
+    note:string
+    createdOn:Date
+    modifiedOn:Date
 }
