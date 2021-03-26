@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class TransactionViewModel: ITransactionViewModel {
+    
+    private var apiService: TransactionAPI!
+    private var model: Transaction!
+    
+    init(model: Transaction, apiService: TransactionAPI) {
+        self.model = model
+        self.apiService = apiService
+    }
+}

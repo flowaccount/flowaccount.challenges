@@ -33,6 +33,16 @@
 		9B7ED825260DE39A00FE5971 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED823260DE39A00FE5971 /* Transaction.swift */; };
 		9B7ED82E260DE79200FE5971 /* TransactionEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED82D260DE79200FE5971 /* TransactionEnum.swift */; };
 		9B7ED82F260DE79200FE5971 /* TransactionEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED82D260DE79200FE5971 /* TransactionEnum.swift */; };
+		9B7ED837260DE96E00FE5971 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED836260DE96E00FE5971 /* Summary.swift */; };
+		9B7ED838260DE96E00FE5971 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED836260DE96E00FE5971 /* Summary.swift */; };
+		9B7ED83E260DEB2B00FE5971 /* TransactionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED83D260DEB2B00FE5971 /* TransactionAPI.swift */; };
+		9B7ED83F260DEB2B00FE5971 /* TransactionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED83D260DEB2B00FE5971 /* TransactionAPI.swift */; };
+		9B7ED848260DEB7300FE5971 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED847260DEB7300FE5971 /* API.swift */; };
+		9B7ED849260DEB7300FE5971 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED847260DEB7300FE5971 /* API.swift */; };
+		9B7ED851260DEC0900FE5971 /* DIModelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED850260DEC0900FE5971 /* DIModelExt.swift */; };
+		9B7ED852260DEC0900FE5971 /* DIModelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED850260DEC0900FE5971 /* DIModelExt.swift */; };
+		9B7ED85A260DEC4C00FE5971 /* DIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED859260DEC4C00FE5971 /* DIViewControllerExt.swift */; };
+		9B7ED85B260DEC4C00FE5971 /* DIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED859260DEC4C00FE5971 /* DIViewControllerExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +90,11 @@
 		9B7ED81C260DE32B00FE5971 /* ISummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISummaryViewModel.swift; sourceTree = "<group>"; };
 		9B7ED823260DE39A00FE5971 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		9B7ED82D260DE79200FE5971 /* TransactionEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEnum.swift; sourceTree = "<group>"; };
+		9B7ED836260DE96E00FE5971 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		9B7ED83D260DEB2B00FE5971 /* TransactionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAPI.swift; sourceTree = "<group>"; };
+		9B7ED847260DEB7300FE5971 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		9B7ED850260DEC0900FE5971 /* DIModelExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIModelExt.swift; sourceTree = "<group>"; };
+		9B7ED859260DEC4C00FE5971 /* DIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIViewControllerExt.swift; sourceTree = "<group>"; };
 		A9BAFA8BBEC54A82E43B1C2C /* Pods-PouchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PouchTests.release.xcconfig"; path = "Target Support Files/Pods-PouchTests/Pods-PouchTests.release.xcconfig"; sourceTree = "<group>"; };
 		E9851CA930A6089B29061976 /* Pods_PouchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PouchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB075D1E4DC907796F2B6DEA /* Pods_Pouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -268,7 +283,9 @@
 			isa = PBXGroup;
 			children = (
 				9B7ED7E7260DD81B00FE5971 /* DIViewModelExt.swift */,
+				9B7ED850260DEC0900FE5971 /* DIModelExt.swift */,
 				9B7ED7EF260DD86F00FE5971 /* DIApiServiceExt.swift */,
+				9B7ED859260DEC4C00FE5971 /* DIViewControllerExt.swift */,
 				9B7ED7FD260DD99000FE5971 /* DIRXExt.swift */,
 			);
 			path = DI;
@@ -285,6 +302,8 @@
 		9B7ED802260DDDAB00FE5971 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9B7ED846260DEB6000FE5971 /* Base */,
+				9B7ED83C260DEB1E00FE5971 /* Transaction */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -304,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				9B7ED823260DE39A00FE5971 /* Transaction.swift */,
+				9B7ED836260DE96E00FE5971 /* Summary.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -314,6 +334,22 @@
 				9B7ED82D260DE79200FE5971 /* TransactionEnum.swift */,
 			);
 			path = Transaction;
+			sourceTree = "<group>";
+		};
+		9B7ED83C260DEB1E00FE5971 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ED83D260DEB2B00FE5971 /* TransactionAPI.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		9B7ED846260DEB6000FE5971 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ED847260DEB7300FE5971 /* API.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -519,13 +555,18 @@
 				9B7ED80D260DE2B500FE5971 /* SummaryViewModel.swift in Sources */,
 				9B7ED81D260DE32B00FE5971 /* ISummaryViewModel.swift in Sources */,
 				9B7ED817260DE30D00FE5971 /* ITransactionViewModel.swift in Sources */,
+				9B7ED837260DE96E00FE5971 /* Summary.swift in Sources */,
 				9B7ED82E260DE79200FE5971 /* TransactionEnum.swift in Sources */,
 				9B683E2D2604AB7A00BB4E7A /* ViewController.swift in Sources */,
+				9B7ED85A260DEC4C00FE5971 /* DIViewControllerExt.swift in Sources */,
 				9B7ED7E8260DD81B00FE5971 /* DIViewModelExt.swift in Sources */,
 				9B683E292604AB7A00BB4E7A /* AppDelegate.swift in Sources */,
 				9B7ED7FE260DD99000FE5971 /* DIRXExt.swift in Sources */,
 				9B683E2B2604AB7A00BB4E7A /* SceneDelegate.swift in Sources */,
+				9B7ED851260DEC0900FE5971 /* DIModelExt.swift in Sources */,
 				9B7ED805260DE24E00FE5971 /* TransactionViewModel.swift in Sources */,
+				9B7ED848260DEB7300FE5971 /* API.swift in Sources */,
+				9B7ED83E260DEB2B00FE5971 /* TransactionAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,11 +575,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B683E402604AB7D00BB4E7A /* PouchTests.swift in Sources */,
+				9B7ED852260DEC0900FE5971 /* DIModelExt.swift in Sources */,
 				9B7ED81E260DE32B00FE5971 /* ISummaryViewModel.swift in Sources */,
+				9B7ED83F260DEB2B00FE5971 /* TransactionAPI.swift in Sources */,
 				9B7ED82F260DE79200FE5971 /* TransactionEnum.swift in Sources */,
+				9B7ED849260DEB7300FE5971 /* API.swift in Sources */,
 				9B7ED825260DE39A00FE5971 /* Transaction.swift in Sources */,
 				9B7ED818260DE30D00FE5971 /* ITransactionViewModel.swift in Sources */,
 				9B7ED80E260DE2B500FE5971 /* SummaryViewModel.swift in Sources */,
+				9B7ED85B260DEC4C00FE5971 /* DIViewControllerExt.swift in Sources */,
+				9B7ED838260DE96E00FE5971 /* Summary.swift in Sources */,
 				9B7ED812260DE2BB00FE5971 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

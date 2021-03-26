@@ -18,8 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     lazy var container: Container = {
         var container = Container()
+        container.registerModel()
         container.registerViewModel()
         container.registerApiService()
+        container.registerViewController()
         container.registerRXManager()
         return container
     }()
