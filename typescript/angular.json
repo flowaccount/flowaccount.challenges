@@ -53,7 +53,7 @@
               "apps/frontend/pouch/src/assets"
             ],
             "styles": [
-              "apps/frontend/pouch/src/styles.scss",
+              "apps/frontend/pouch/src/styles.scss"
             ],
             "scripts": []
           },

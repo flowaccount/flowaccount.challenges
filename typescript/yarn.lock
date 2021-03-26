@@ -1803,6 +1803,13 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@swimlane/ngx-datatable@^19.0.0":
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/@swimlane/ngx-datatable/-/ngx-datatable-19.0.0.tgz#7eed84ba276ebb9e4761233f8ac95d38fdff45b7"
+  integrity sha512-S8eknIQeZtr5aPZgBUItHmt+aQwrI32Hm3jvrxqJXK9J43oDzhIKT2qR1rre3s0XlBn6Zl8LAbmlKotQ5nnxnQ==
+  dependencies:
+    tslib "^2.0.0"
+
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.13"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.13.tgz#bc6eea53975fdf163aff66c086522c6f293ae4cf"
