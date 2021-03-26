@@ -1,0 +1,17 @@
+.renew-companyId_head {
+    width: 15% !important;
+    max-width: 130px;
+    font-family: 'cs_chatthaiuiregular', sans-serif;
+    font-size: 15px !important;
+    line-height: 1.53em !important;
+    // padding: 0 !important;
+  }
+
+ngx-datatable {
+    datatable-header-cell.renew-companyId_head {
+      padding-left: 5px !important;
+      .input-group-sm input {
+        width: 100px;
+      }
+    }
+}

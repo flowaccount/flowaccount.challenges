@@ -4,7 +4,7 @@ import { TransactionListComponentComponent } from './transaction-list-component/
 import { TransactionFormComponentComponent } from './transaction-form-component/transaction-form-component.component';
 import { TransactionRoutingModule } from './transaction-routing.module';
 import { TransactionApiService } from './transaction-api-service.service';
-
+import { NgxDatatableModule } from '@swimlane/ngx-datatable'
 
 
 
@@ -12,7 +12,8 @@ import { TransactionApiService } from './transaction-api-service.service';
   declarations: [TransactionListComponentComponent, TransactionFormComponentComponent],
   imports: [
     CommonModule,
-    TransactionRoutingModule
+    TransactionRoutingModule,
+    NgxDatatableModule
   ],
   providers:[
     TransactionApiService
