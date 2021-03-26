@@ -33,7 +33,7 @@ export const environment = {
         zoneName: `${process.env.DOMAIN}`,
         hostedZoneId: "Z1YG5PTYO483CG",
         cnameAppList: [
-            { app: "pounch" }
+            { app: "pouch" }
         ]
     },
     acm: {
@@ -41,9 +41,9 @@ export const environment = {
         domainName: `*.${process.env.DOMAIN}`
     },
     alb: {
-        name: "pounch-alb",
+        name: "pouch-alb",
         securityGroup: { 
-            name: "pounch-alb-sg",
+            name: "pouch-alb-sg",
             inboudRule: [
                 { ipRange: "0.0.0.0/0", protocol: Protocol.TCP, port: 80 },
                 { ipRange: "0.0.0.0/0", protocol: Protocol.TCP, port: 443 }
@@ -54,21 +54,21 @@ export const environment = {
     application: [
         {
             albRuleCondition: [
-                ListenerCondition.hostHeaders([`pounch.${process.env.DOMAIN}`])
+                ListenerCondition.hostHeaders([`pouch.${process.env.DOMAIN}`])
             ],
             albRulePriority: 2,
             targetgroup: {
-                name: "frontend-pounch-tg"
+                name: "frontend-pouch-tg"
             }
         },
         {
             albRuleCondition: [
-                ListenerCondition.hostHeaders([`pounch.${process.env.DOMAIN}`]),
+                ListenerCondition.hostHeaders([`pouch.${process.env.DOMAIN}`]),
                 ListenerCondition.pathPatterns(['/api'])
             ],
             albRulePriority: 1,
             targetgroup: {
-                name: "api-pounch-tg"
+                name: "api-pouch-tg"
             }
         }
     ]
