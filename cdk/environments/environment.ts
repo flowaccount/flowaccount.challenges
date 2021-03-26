@@ -1,5 +1,6 @@
 import * as dotenv from "dotenv"
-import { SubnetType } from "@aws-cdk/aws-ec2"
+import { Protocol, SubnetType } from "@aws-cdk/aws-ec2"
+import { ListenerCondition } from "@aws-cdk/aws-elasticloadbalancingv2"
 
 dotenv.config()
 
@@ -28,6 +29,49 @@ export const environment = {
     subnets: [
         { 
             name: "database" 
+        }
+    ],
+    route53: {
+        zoneName: `${process.env.DOMAIN}`,
+        hostedZoneId: "Z1YG5PTYO483CG",
+        cnameAppList: [
+            { app: "pouch" }
+        ]
+    },
+    acm: {
+        name: "wildcard-flowaccount-dev",
+        domainName: `*.${process.env.DOMAIN}`
+    },
+    alb: {
+        name: "pouch-alb",
+        securityGroup: { 
+            name: "pouch-alb-sg",
+            inboudRule: [
+                { ipRange: "0.0.0.0/0", protocol: Protocol.TCP, port: 80 },
+                { ipRange: "0.0.0.0/0", protocol: Protocol.TCP, port: 443 }
+            ]
+
+        }
+    },
+    application: [
+        {
+            albRuleCondition: [
+                ListenerCondition.hostHeaders([`pouch.${process.env.DOMAIN}`])
+            ],
+            albRulePriority: 2,
+            targetgroup: {
+                name: "frontend-pouch-tg"
+            }
+        },
+        {
+            albRuleCondition: [
+                ListenerCondition.hostHeaders([`pouch.${process.env.DOMAIN}`]),
+                ListenerCondition.pathPatterns(['/api'])
+            ],
+            albRulePriority: 1,
+            targetgroup: {
+                name: "api-pouch-tg"
+            }
         }
     ],
     rds: {
