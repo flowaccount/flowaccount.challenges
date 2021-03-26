@@ -14,6 +14,30 @@ export class TransactionListComponentComponent implements OnInit {
   constructor(private transactionApiService:TransactionApiService) { }
 
   ngOnInit(): void {
+    // this.getListTransactions()
+    this.rows = [{
+      categoryId :1 ,
+      transactionDate :null,
+      name:'string',
+      type: 1,
+      value:2,
+      isDelete: false,
+      status :1,
+      note:'string',
+      createdOn:null,
+      modifiedOn:null
+    },{
+      categoryId :1 ,
+      transactionDate :null,
+      name:'string',
+      type: 1,
+      value:2,
+      isDelete: false,
+      status :1,
+      note:'string',
+      createdOn:null,
+      modifiedOn:null
+    }]
   }
 
   getListTransactions() : void{
