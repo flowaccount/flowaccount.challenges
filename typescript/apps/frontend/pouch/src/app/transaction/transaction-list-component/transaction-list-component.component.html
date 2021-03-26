@@ -1,88 +1,88 @@
 <div id="transaction-list-page"> 
-    <div class="wapper">
-    <div class="section-1">
-        <div class="left-div">
-            <div class="flex-item-div">
-                    <div class="title">Income</div>
-                    <div class="amount color-green">6000</div>
-            </div>
-    
-            <div class="flex-item-div">
-                    <div class="title">Expense</div>
-                    <div class="amount color-red">6000</div>
-            </div>
-    
-            <div class="flex-item-div">
-                    <div class="title">Balance</div>
-                    <div class="amount color-blue">6000</div>
-            </div>
-        </div>
+  <div class="wapper">
+      <div class="section-1">
+          <div class="left-div">
+              <div class="flex-item-div">
+                      <div class="title">Income</div>
+                      <div class="amount color-green">6000</div>
+              </div>
       
-        <div class="right-div">
-            <div>
-                <button class="btn btn-success">+Add</button>
-            </div>
-          
-        </div>
-    </div> 
-    <div class="section-2">
-        <div class="left-div">
-          <div class="item-div">
-            <div class="title">Income/Expense</div>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+              <div class="flex-item-div">
+                      <div class="title">Expense</div>
+                      <div class="amount color-red">6000</div>
               </div>
-            </div>
-          </div>
-
-          <div class="item-div">
-            <div class="title">Category</div>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+      
+              <div class="flex-item-div">
+                      <div class="title">Balance</div>
+                      <div class="amount color-blue">6000</div>
               </div>
-            </div>
+          </div> 
+          <div class="right-div">
+              <div>
+                  <button class="btn btn-success">+Add</button>
+              </div>
+            
           </div>
-
-        </div>
-
-        <div class="right-div">
-          <div>
-            <button class="btn btn-primary">Go</button>
-          </div>
-        </div>
-    </div>
-    <div class="section-3">
-        <div id="transaction-list-div">
-            <div class="transaction-head">
-                <div>Income/Expense</div>
-                <div>Date</div>
-                <div>Category</div>
-                <div class="text-right">Amount</div>
-                <div>&nbsp;</div> 
-            </div>
-            <div class="transaction-row-div">
-                <div *ngFor="let row of rows"> 
-                    <div class="transaction-row" >
-                        <div>{{ row.type }}</div>
-                        <div>{{ row.transactionDate }}</div>
-                        <div>{{ row.categoryId }}</div>
-                        <div class="text-right">{{ row.value }}</div>
-                        <div class="text-center"><i class="fas fa-pencil-alt"></i>&nbsp;&nbsp;<i class="fas fa-trash"></i></div>
-                    </div>
+      </div> 
+      <div class="section-2">
+          <div class="left-div">
+            <div class="item-div">
+              <div class="title">Income/Expense</div>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
+
+            <div class="item-div">
+              <div class="title">Category</div>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="right-div">
+            <div>
+              <button class="btn btn-primary">Go</button>
+            </div>
+          </div>
+      </div>
+      <div class="section-3">
+          <div id="transaction-list-div">
+              <div class="transaction-head">
+                  <div>Income/Expense</div>
+                  <div>Date</div>
+                  <div>Category</div>
+                  <div class="text-right">Amount</div>
+                  <div>&nbsp;</div> 
+              </div>
+              <div class="transaction-row-div">
+                  <div *ngFor="let row of rows"> 
+                      <div class="transaction-row" >
+                          <div>{{ row.type }}</div>
+                          <div>{{ row.transactionDate }}</div>
+                          <div>{{ row.categoryId }}</div>
+                          <div class="text-right">{{ row.value }}</div>
+                          <div class="text-center"><i class="fas fa-pencil-alt"></i>&nbsp;&nbsp;<i class="fas fa-trash"></i></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>

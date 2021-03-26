@@ -8,7 +8,6 @@ import { TransactionModel } from '@typescript/shared/models'
   styleUrls: ['./transaction-list-component.component.scss']
 })
 export class TransactionListComponentComponent implements OnInit {
-
   rows : Array<TransactionModel>= [];
 
   constructor(private transactionApiService:TransactionApiService) { }
