@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv"
-import { Stack, Construct, StackProps, Tags } from '@aws-cdk/core'
+import { Stack, Construct, StackProps, Tags, Duration } from '@aws-cdk/core'
 dotenv.config()
 import { environment } from '../environments/environment'
 import { Credentials, DatabaseInstance, LicenseModel, StorageType, SubnetGroup } from "@aws-cdk/aws-rds";
@@ -36,7 +36,9 @@ export class RdsStack extends Stack {
         storageType: StorageType.GP2,      
         allocatedStorage: environment.rds.dbSize,          
         deletionProtection: environment.rds.deletionProtection,
-        credentials: Credentials.fromSecret(_ssm)
+        credentials: Credentials.fromSecret(_ssm),
+        backupRetention: Duration.days(0),
+        deleteAutomatedBackups: true
      });
 
     Tags.of(this).add("StackName", environment.stack.stackName)
