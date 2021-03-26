@@ -6,9 +6,15 @@
 //
 
 import Foundation
+import UIKit
 
 class TransactionListController: BaseViewController {
+    
+    @IBOutlet var coll: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
 }
