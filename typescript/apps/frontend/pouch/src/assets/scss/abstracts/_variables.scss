@@ -1,4 +1,10 @@
 // COLORS
+$color-blue: #3077eb;
+$color-green: #00bf3b;
+$color-red: #f2525d; 
+
+$color-gray-border: #e6e9ee;
+
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
@@ -19,6 +25,10 @@ $color-grey-dark-3: #333;
 $color-white: #fff;
 $color-black: #000;
 
+$green:#00bf3b;
+$red: #f2525d;
+$blue: #3077eb;
+
 
 // FONT
 $default-font-size: 1.6rem;
@@ -29,3 +39,16 @@ $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
+
+$wapper: 1200px;
+
+// class for use
+.color-blue{
+    color:$color-blue;
+}
+.color-green{
+    color:$color-green;
+}
+.color-red{
+    color:$color-red;
+}
