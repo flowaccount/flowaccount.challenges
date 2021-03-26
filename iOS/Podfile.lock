@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.4.1)
   - ObjectMapper (4.2.0)
   - RxCocoa (6.1.0):
     - RxRelay (= 6.1.0)
@@ -9,6 +10,7 @@ PODS:
   - Swinject (2.7.1)
 
 DEPENDENCIES:
+  - Alamofire
   - ObjectMapper
   - RxCocoa
   - RxSwift
@@ -16,6 +18,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - ObjectMapper
     - RxCocoa
     - RxRelay
@@ -23,12 +26,13 @@ SPEC REPOS:
     - Swinject
 
 SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 658729a60d749b9406457272e42da7e052d6ff29
+PODFILE CHECKSUM: f15728f539069d457a8d366c01cbdf2a106c74b4
 
 COCOAPODS: 1.10.1
