@@ -5,37 +5,37 @@ platform :ios, '13.0'
 use_frameworks!
 
 def common_pods
-  pod 'Swinject'
+    pod 'Swinject'
 end
 
 def data_pods
-  pod 'ObjectMapper'
+    pod 'ObjectMapper'
 end
 
 def rx_pods
-  pod 'RxSwift'
-  pod 'RxCocoa'
+    pod 'RxSwift'
+    pod 'RxCocoa'
 end
 
 def network_pods
- # Add network lib here
+    pod 'Alamofire'
 end
 
 target 'Pouch' do
-  inhibit_all_warnings!
-
-  common_pods
-  data_pods
-  rx_pods
-  network_pods
-
-  target 'PouchTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  # target 'PouchUITests' do
-  #   # Pods for testing
-  # end
-
+    inhibit_all_warnings!
+    
+    common_pods
+    data_pods
+    rx_pods
+    network_pods
+    
+    target 'PouchTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
+    # target 'PouchUITests' do
+    #   # Pods for testing
+    # end
+    
 end
