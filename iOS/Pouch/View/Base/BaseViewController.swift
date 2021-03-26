@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
-class TrannsactionListController: BaseViewController {
-    
+class BaseViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
