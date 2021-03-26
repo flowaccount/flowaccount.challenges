@@ -34,10 +34,17 @@ class TransactionListFragment : ProgressableFragment() {
 
         viewModel.transactions.observe(viewLifecycleOwner) { transitions ->
             binding.transactionList.adapter = TransactionListAdapter(transitions)
+            binding.swipeToRefresh.isRefreshing = false
         }
 
         binding.createTransactionFab.setOnClickListener {
             findNavController().navigate(R.id.action_TransactionListFragment_to_TransactionDetailFragment)
         }
+
+        binding.swipeToRefresh.setOnRefreshListener { refreshData() }
+    }
+
+    private fun refreshData() {
+        viewModel.loadTransactions()
     }
 }

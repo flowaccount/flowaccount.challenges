@@ -11,13 +11,17 @@ import javax.inject.Inject
 
 @HiltViewModel
 class TransactionListViewModel @Inject constructor(
-    transactionRepository: ITransactionRepository
+    private val transactionRepository: ITransactionRepository
 ) : ViewModel() {
 
     val isLoading = MutableLiveData<Boolean>()
     val transactions = MutableLiveData<List<Transaction>>()
 
     init {
+        loadTransactions()
+    }
+
+    fun loadTransactions() {
         isLoading.postValue(true)
         viewModelScope.launch {
             transactions.value = transactionRepository.getTransactions()
