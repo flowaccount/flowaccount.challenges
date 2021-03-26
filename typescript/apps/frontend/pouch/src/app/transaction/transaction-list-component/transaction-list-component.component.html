@@ -24,6 +24,45 @@
             </div>
           
         </div>
+    </div>
+    <ngx-datatable
+        [rows]="rows"
+        class="material">
+        <ngx-datatable-column headerClass="renew-transaction" cellClass="renew-companyId">
+            <ng-template let-renew="column" ngx-datatable-header-template>
+              <div class="head">Income/Expense</div>
+            </ng-template>
+            <ng-template let-renew="row" ngx-datatable-cell-template>
+                {{ row.type  }}
+            </ng-template>
+          </ngx-datatable-column>
+
+          <ngx-datatable-column headerClass="renew-transaction" cellClass="renew-companyId">
+            <ng-template let-renew="column" ngx-datatable-header-template>
+              <div class="head">Date</div>
+            </ng-template>
+            <ng-template let-renew="row" ngx-datatable-cell-template>
+                {{ row.date }}
+            </ng-template>
+          </ngx-datatable-column>
+
+          <ngx-datatable-column headerClass="renew-transaction" cellClass="renew-companyId">
+            <ng-template let-renew="column" ngx-datatable-header-template>
+              <div class="head">Catagory</div>
+            </ng-template>
+            <ng-template let-renew="row" ngx-datatable-cell-template>
+                {{ row.categoryId }}
+            </ng-template>
+          </ngx-datatable-column>
+
+          <ngx-datatable-column headerClass="renew-transaction" cellClass="renew-companyId">
+            <ng-template let-renew="column" ngx-datatable-header-template>
+              <div class="head">Amount</div>
+            </ng-template>
+            <ng-template let-renew="row" ngx-datatable-cell-template>
+                {{ row.value}}
+            </ng-template>
+          </ngx-datatable-column>
     </div> 
     <div class="section-2">
         <div class="left-div">
@@ -70,18 +109,17 @@
                 <div>A2</div>
                 <div>A3</div>
                 <div>A4</div>
-                <div>A5</div>
-                <div>A6</div>
+                <div>A5</div> 
             </div>
             <div class="transaction-row-div">
-    
-                <div class="transaction-row">
-                    <div>A1</div>
-                    <div>A2</div>
-                    <div>A3</div>
-                    <div>A4</div>
-                    <div>A5</div>
-                    <div>A6</div>
+                <div *ngFor="let row of rows">
+                    <div class="transaction-row" >
+                        <div>{{ row.type }}</div>
+                        <div>{{ row.date }}</div>
+                        <div>{{ row.categoryId  }}</div>
+                        <div>{{ row.value }}</div>
+                        <div>{{ A5}}</div>
+                    </div>
                 </div>
             </div>
         </div>
