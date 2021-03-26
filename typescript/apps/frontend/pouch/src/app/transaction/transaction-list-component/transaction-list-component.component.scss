@@ -1,3 +1,5 @@
+@import '../../../assets/scss/abstracts/variables';
+
  #transaction-list-page{
     .section-1 {
         background-color: #fcfcfc;
@@ -62,6 +64,7 @@
     }
     .section-3{
         #transaction-list-div{
+            
             .transaction-head,
             .transaction-row{
                 $w1: 220px;
@@ -72,6 +75,8 @@
                 display: table;
                 > div {
                     display: table-cell;
+                    padding: 10px 8px;
+                    border-bottom: 1px solid $color-gray-border;
                 }
                 > div:nth-child(1){
                     width: $w1;
