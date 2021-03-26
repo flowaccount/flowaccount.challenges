@@ -4,11 +4,9 @@ import { TransactionListComponentComponent } from "./transaction-list-component/
 
 
 export const transactionIndexState: Route = {
-    path: 'transaction',
-    children: [
-      { path: '', component: TransactionListComponentComponent }
-    ],
-  }
+    path: '',
+    component: TransactionListComponentComponent
+}
 
 const routes: Routes = [transactionIndexState]
 

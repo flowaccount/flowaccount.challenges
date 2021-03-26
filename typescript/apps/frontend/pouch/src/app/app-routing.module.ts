@@ -5,7 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./transaction/transaction.module').then(module => module.TransactionModule)
-  }
+  },  
+  { path:'**', redirectTo: ''}
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,7 +1,8 @@
 {
   "version": 1,
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
   },
   "defaultProject": "frontend-pouch",
   "schematics": {
@@ -51,7 +52,9 @@
               "apps/frontend/pouch/src/favicon.ico",
               "apps/frontend/pouch/src/assets"
             ],
-            "styles": ["apps/frontend/pouch/src/styles.scss"],
+            "styles": [
+              "apps/frontend/pouch/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -112,7 +115,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/frontend/pouch"],
+          "outputs": [
+            "coverage/apps/frontend/pouch"
+          ],
           "options": {
             "jestConfig": "apps/frontend/pouch/jest.config.js",
             "passWithNoTests": true
@@ -141,7 +146,36 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/frontend/pouch-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/frontend/pouch-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "shared-models": {
+      "projectType": "library",
+      "root": "libs/shared/models",
+      "sourceRoot": "libs/shared/models/src",
+      "prefix": "typescript",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/models/src/**/*.ts",
+              "libs/shared/models/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/models"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/models/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
