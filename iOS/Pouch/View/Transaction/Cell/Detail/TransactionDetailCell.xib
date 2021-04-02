@@ -76,6 +76,11 @@
                                     <constraint firstAttribute="trailing" secondItem="Y7o-xv-lYw" secondAttribute="trailing" constant="24" id="tBH-hd-tKG"/>
                                     <constraint firstItem="CEL-Vm-5zF" firstAttribute="top" secondItem="1uw-Wd-Ggf" secondAttribute="bottom" constant="8" id="xLe-xn-9eo"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radiusView">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="GrayBG"/>

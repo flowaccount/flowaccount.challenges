@@ -80,6 +80,14 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43r-as-2Gh">
+                                <rect key="frame" x="175" y="774" width="64" height="64"/>
+                                <color key="backgroundColor" name="BaseApp"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="JXL-ME-48W"/>
+                                    <constraint firstAttribute="height" constant="64" id="NYo-rh-fBx"/>
+                                </constraints>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mwR-qO-D4X"/>
                         <color key="backgroundColor" name="GrayBG"/>
@@ -88,7 +96,9 @@
                             <constraint firstItem="eeZ-ZD-Yef" firstAttribute="leading" secondItem="mwR-qO-D4X" secondAttribute="leading" id="O6r-Wr-sdH"/>
                             <constraint firstItem="aHI-pE-nA8" firstAttribute="top" secondItem="QmL-s9-Lir" secondAttribute="top" id="Ppm-o5-R54"/>
                             <constraint firstItem="mwR-qO-D4X" firstAttribute="trailing" secondItem="eeZ-ZD-Yef" secondAttribute="trailing" id="RaH-6X-nl5"/>
+                            <constraint firstItem="43r-as-2Gh" firstAttribute="centerX" secondItem="QmL-s9-Lir" secondAttribute="centerX" id="RgT-xf-QDd"/>
                             <constraint firstItem="eeZ-ZD-Yef" firstAttribute="top" secondItem="aHI-pE-nA8" secondAttribute="bottom" id="b3X-0g-spm"/>
+                            <constraint firstItem="mwR-qO-D4X" firstAttribute="bottom" secondItem="43r-as-2Gh" secondAttribute="bottom" constant="24" id="f9P-w5-owi"/>
                             <constraint firstAttribute="bottom" secondItem="eeZ-ZD-Yef" secondAttribute="bottom" id="ggY-6a-ZKx"/>
                             <constraint firstItem="mwR-qO-D4X" firstAttribute="trailing" secondItem="aHI-pE-nA8" secondAttribute="trailing" id="xKf-Ch-1RR"/>
                         </constraints>
@@ -103,6 +113,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="BaseApp">
+            <color red="0.019999999552965164" green="0.47699999809265137" blue="0.99500000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="GrayBG">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.97000002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
