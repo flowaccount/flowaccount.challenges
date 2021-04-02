@@ -17,6 +17,10 @@
 		9B683E352604AB7D00BB4E7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B683E332604AB7D00BB4E7A /* LaunchScreen.storyboard */; };
 		9B683E402604AB7D00BB4E7A /* PouchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B683E3F2604AB7D00BB4E7A /* PouchTests.swift */; };
 		9B683E4B2604AB7D00BB4E7A /* PouchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B683E4A2604AB7D00BB4E7A /* PouchUITests.swift */; };
+		9B6B64202617164300EE2CBF /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B641F2617164300EE2CBF /* TransactionDetailViewModel.swift */; };
+		9B6B64212617164300EE2CBF /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B641F2617164300EE2CBF /* TransactionDetailViewModel.swift */; };
+		9B6B642B2617171E00EE2CBF /* ITransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B642A2617171E00EE2CBF /* ITransactionDetailViewModel.swift */; };
+		9B6B642C2617171E00EE2CBF /* ITransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B642A2617171E00EE2CBF /* ITransactionDetailViewModel.swift */; };
 		9B7ED7E8260DD81B00FE5971 /* DIViewModelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED7E7260DD81B00FE5971 /* DIViewModelExt.swift */; };
 		9B7ED7F0260DD86F00FE5971 /* DIApiServiceExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED7EF260DD86F00FE5971 /* DIApiServiceExt.swift */; };
 		9B7ED7F6260DD93900FE5971 /* RXPublishSubjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7ED7F5260DD93900FE5971 /* RXPublishSubjectManager.swift */; };
@@ -84,6 +88,8 @@
 		9B683E462604AB7D00BB4E7A /* PouchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PouchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B683E4A2604AB7D00BB4E7A /* PouchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PouchUITests.swift; sourceTree = "<group>"; };
 		9B683E4C2604AB7D00BB4E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B6B641F2617164300EE2CBF /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
+		9B6B642A2617171E00EE2CBF /* ITransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITransactionDetailViewModel.swift; sourceTree = "<group>"; };
 		9B7ED7E7260DD81B00FE5971 /* DIViewModelExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIViewModelExt.swift; sourceTree = "<group>"; };
 		9B7ED7EF260DD86F00FE5971 /* DIApiServiceExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIApiServiceExt.swift; sourceTree = "<group>"; };
 		9B7ED7F5260DD93900FE5971 /* RXPublishSubjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXPublishSubjectManager.swift; sourceTree = "<group>"; };
@@ -271,6 +277,31 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		9B6B641E2617160E00EE2CBF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9B6B64292617170A00EE2CBF /* Summary */,
+				9B6B6428261716F800EE2CBF /* Detail */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9B6B6428261716F800EE2CBF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9B6B641F2617164300EE2CBF /* TransactionDetailViewModel.swift */,
+				9B6B642A2617171E00EE2CBF /* ITransactionDetailViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		9B6B64292617170A00EE2CBF /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
 		9B7ED7E4260DD67900FE5971 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +348,7 @@
 		9B7ED803260DDDED00FE5971 /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
+				9B6B641E2617160E00EE2CBF /* Cell */,
 				9B7ED816260DE30D00FE5971 /* ITransactionViewModel.swift */,
 				9B7ED804260DE24E00FE5971 /* TransactionViewModel.swift */,
 				9B7ED81C260DE32B00FE5971 /* ISummaryViewModel.swift */,
@@ -573,9 +605,11 @@
 				9B7ED869260DF6D700FE5971 /* APIResponseArray.swift in Sources */,
 				9B7ED7FE260DD99000FE5971 /* DIRXExt.swift in Sources */,
 				9B683E2B2604AB7A00BB4E7A /* SceneDelegate.swift in Sources */,
+				9B6B64202617164300EE2CBF /* TransactionDetailViewModel.swift in Sources */,
 				9B7ED851260DEC0900FE5971 /* DIModelExt.swift in Sources */,
 				9B7ED805260DE24E00FE5971 /* TransactionViewModel.swift in Sources */,
 				9B7ED848260DEB7300FE5971 /* API.swift in Sources */,
+				9B6B642B2617171E00EE2CBF /* ITransactionDetailViewModel.swift in Sources */,
 				9B7ED83E260DEB2B00FE5971 /* TransactionAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,12 +625,14 @@
 				9B7ED83F260DEB2B00FE5971 /* TransactionAPI.swift in Sources */,
 				9B7ED864260DF4EC00FE5971 /* BaseAPIResponse.swift in Sources */,
 				9B7ED82F260DE79200FE5971 /* TransactionEnum.swift in Sources */,
+				9B6B64212617164300EE2CBF /* TransactionDetailViewModel.swift in Sources */,
 				9B7ED849260DEB7300FE5971 /* API.swift in Sources */,
 				9B7ED825260DE39A00FE5971 /* Transaction.swift in Sources */,
 				9B7ED818260DE30D00FE5971 /* ITransactionViewModel.swift in Sources */,
 				9B7ED80E260DE2B500FE5971 /* SummaryViewModel.swift in Sources */,
 				9B7ED85B260DEC4C00FE5971 /* DIViewControllerExt.swift in Sources */,
 				9B7ED838260DE96E00FE5971 /* Summary.swift in Sources */,
+				9B6B642C2617171E00EE2CBF /* ITransactionDetailViewModel.swift in Sources */,
 				9B7ED812260DE2BB00FE5971 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
