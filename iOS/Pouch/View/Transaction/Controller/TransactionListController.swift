@@ -10,12 +10,16 @@ import UIKit
 
 class TransactionListController: BaseViewController {
     
-    struct RawCell {
+    struct rawCell {
         static let summaryCell = "TransactionSummaryCell"
         static let detailCell = "TransactionDetailCell"
     }
     
     @IBOutlet var coll: UICollectionView!
+    
+    private lazy var viewModel: TransactionViewModel = {
+        return appDelegate.container.resolve(TransactionViewModel.self)!
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +27,11 @@ class TransactionListController: BaseViewController {
     }
     
     private func registerCell() {
-        coll.register(UINib(nibName: RawCell.summaryCell, bundle: nil), forCellWithReuseIdentifier: RawCell.summaryCell)
-        coll.register(UINib(nibName: RawCell.detailCell, bundle: nil), forCellWithReuseIdentifier: RawCell.detailCell)
+        coll.register(UINib(nibName: rawCell.summaryCell, bundle: nil), forCellWithReuseIdentifier: rawCell.summaryCell)
+        coll.register(UINib(nibName: rawCell.detailCell, bundle: nil), forCellWithReuseIdentifier: rawCell.detailCell)
         coll.delegate = self
         coll.dataSource = self
     }
-    
 }
 
 extension TransactionListController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -38,10 +41,10 @@ extension TransactionListController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RawCell.summaryCell, for: indexPath) as! TransactionSummaryCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: rawCell.summaryCell, for: indexPath) as! TransactionSummaryCell
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RawCell.detailCell, for: indexPath) as! TransactionDetailCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: rawCell.detailCell, for: indexPath) as! TransactionDetailCell
             return cell
         }
     }

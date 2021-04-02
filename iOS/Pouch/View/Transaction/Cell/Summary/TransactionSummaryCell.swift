@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct TransactionSummaryModel {
+    
+    
+}
+
 class TransactionSummaryCell: BaseCollecionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
