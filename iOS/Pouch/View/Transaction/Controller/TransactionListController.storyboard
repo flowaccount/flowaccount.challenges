@@ -19,9 +19,54 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHI-pE-nA8">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LWo-yv-BOU">
+                                        <rect key="frame" x="24" y="44" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="5Rm-40-5C4"/>
+                                            <constraint firstAttribute="height" constant="36" id="TP2-FF-o4L"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pouch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyq-Mn-A6W">
+                                        <rect key="frame" x="68" y="44" width="35.5" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 THB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCg-Nf-wZz">
+                                        <rect key="frame" x="68" y="59" width="88.5" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HS9-9U-DFX">
+                                        <rect key="frame" x="377" y="44" width="21" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="21" id="QTo-3y-qiI"/>
+                                            <constraint firstAttribute="height" constant="21" id="aKG-MD-uT4"/>
+                                        </constraints>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lt8-wh-2ke">
+                                        <rect key="frame" x="340" y="44" width="21" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="21" id="e3Y-tz-2X3"/>
+                                            <constraint firstAttribute="height" constant="21" id="e3f-Sy-zma"/>
+                                        </constraints>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" name="baseApp"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HS9-9U-DFX" secondAttribute="trailing" constant="16" id="1h5-H2-b8n"/>
                                     <constraint firstAttribute="height" constant="104" id="3VE-Hu-azs"/>
+                                    <constraint firstItem="HS9-9U-DFX" firstAttribute="top" secondItem="LWo-yv-BOU" secondAttribute="top" id="8nU-Og-7fK"/>
+                                    <constraint firstItem="eCg-Nf-wZz" firstAttribute="leading" secondItem="LWo-yv-BOU" secondAttribute="trailing" constant="8" id="D6z-Zy-kzu"/>
+                                    <constraint firstItem="lt8-wh-2ke" firstAttribute="top" secondItem="LWo-yv-BOU" secondAttribute="top" id="Fds-iK-uGt"/>
+                                    <constraint firstItem="Yyq-Mn-A6W" firstAttribute="top" secondItem="LWo-yv-BOU" secondAttribute="top" id="ICn-ke-Ygm"/>
+                                    <constraint firstItem="HS9-9U-DFX" firstAttribute="leading" secondItem="lt8-wh-2ke" secondAttribute="trailing" constant="16" id="VBa-RV-TDr"/>
+                                    <constraint firstItem="LWo-yv-BOU" firstAttribute="leading" secondItem="aHI-pE-nA8" secondAttribute="leading" constant="24" id="a3z-iM-RiC"/>
+                                    <constraint firstItem="Yyq-Mn-A6W" firstAttribute="leading" secondItem="LWo-yv-BOU" secondAttribute="trailing" constant="8" id="eh5-Uw-ewU"/>
+                                    <constraint firstAttribute="bottom" secondItem="LWo-yv-BOU" secondAttribute="bottom" constant="24" id="k5H-YP-a6E"/>
+                                    <constraint firstItem="eCg-Nf-wZz" firstAttribute="top" secondItem="Yyq-Mn-A6W" secondAttribute="bottom" id="xwo-Yd-FiL"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eeZ-ZD-Yef">
