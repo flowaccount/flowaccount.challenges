@@ -11,7 +11,7 @@ import RxSwift
 
 class RXPublishSubjectManager<T> {
     
-    private let publishSubject: PublishSubject<T>
+    private var publishSubject: PublishSubject<T>
     private var subscribe: Disposable!
     
     init(publishSubject: PublishSubject<T>) {

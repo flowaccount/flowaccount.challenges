@@ -12,8 +12,8 @@ import RxCocoa
 
 extension Container {
     func registerRXManager() {
-        self.register(RXPublishSubjectManager<[Transaction]>.self) { (_) in
-            let transaction = PublishSubject<[Transaction]>()
+        self.register(RXPublishSubjectManager<[TransactionViewModel]>.self) { (_) in
+            let transaction = PublishSubject<[TransactionViewModel]>()
             return RXPublishSubjectManager(publishSubject: transaction)
         }
     }

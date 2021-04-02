@@ -10,9 +10,11 @@ import Foundation
 class TransactionViewModel: ITransactionViewModel {
     
     private var apiService: TransactionAPI!
-    private var rxTransaction: RXPublishSubjectManager<[Transaction]>!
+    private var rxTransaction: RXPublishSubjectManager<[TransactionViewModel]>!
+    private var model: Transaction!
     
-    init(apiService: TransactionAPI, rx: RXPublishSubjectManager<[Transaction]>) {
+    init(model: Transaction, apiService: TransactionAPI, rx: RXPublishSubjectManager<[TransactionViewModel]>) {
+        self.model = model
         self.apiService = apiService
         self.rxTransaction = rx
         self.getTransactionList()
@@ -26,11 +28,15 @@ class TransactionViewModel: ITransactionViewModel {
         return "Test User"
     }
     
+    private func getCurrent() -> Transaction {
+        return model
+    }
+    
     private func getTransactionList() {
-        var params: [String: Any] = [:]
-        params["test"] = 0
-        self.apiService.getList(params: params) { (transactions: [Transaction]) in
-            self.rxTransaction.onNext(transactions)
+        let params = getCurrent().toJSON()
+        self.apiService.getList(params: params) { (models: [Transaction]) in
+            let viewModels = models.map( { TransactionViewModel(model: $0, apiService: self.apiService, rx: self.rxTransaction) } )
+            self.rxTransaction.onNext(viewModels)
         }
     }
 }
