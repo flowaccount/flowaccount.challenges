@@ -1,29 +1,19 @@
 {
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "npmScope": "typescript",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "ZTQ1ZTMxNjQtNjU1MC00NmU0LWEwOGUtZmQyMGFkNTYzOTNifHJlYWQtd3JpdGU=",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
@@ -31,14 +21,11 @@
     }
   },
   "projects": {
-    "covid19-local-adventures": {
-      "tags": []
-    },
-    "covid19-local-adventures-e2e": {
+    "frontend-pouch": { "tags": [] },
+    "frontend-pouch-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "covid19-local-adventures"
-      ]
-    }
+      "implicitDependencies": ["frontend-pouch"]
+    },
+    "shared-models": { "tags": [] }
   }
 }

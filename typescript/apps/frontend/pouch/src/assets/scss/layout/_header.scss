@@ -1,0 +1,13 @@
+header {
+    color: $color-blue;
+    font-size: 28px;
+    line-height: 59px;
+    height: 59px;
+    border-bottom: 1px solid $color-gray-border;
+    .wapper{
+        > i{
+            font-size: 24px;
+            padding-right: 8px;
+        }
+    }
+}

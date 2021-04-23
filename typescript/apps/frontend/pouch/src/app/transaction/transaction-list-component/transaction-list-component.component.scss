@@ -1,0 +1,105 @@
+@import '../../../assets/scss/abstracts/variables';
+
+ #transaction-list-page{
+    .section-1 {
+        background-color: #fcfcfc;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .left-div {
+            display: flex;
+            .flex-item-div{
+                padding: 0px 55px 0px 15px;
+                .title {
+                    font-size: 13px;
+                }
+                .amount {
+                    font-size: 32px;
+                }
+            }
+            .flex-item-div:not(:last-child){
+                border-right: 1px solid #e6e9ee;
+            }
+        }
+        .right-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            button {
+                width: 160px;
+                height: 40px;
+                font-size: 18px;
+                border-radius: 8px;
+            }
+        }
+    } 
+    .section-2 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        border: 1px solid #e6e9ee;
+        padding: 15px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        .left-div {
+            display: flex;
+            .item-div {
+                .title {
+                    font-size: 13px;
+                }
+            }
+            .item-div:not(.last-child) {
+                margin-right: 28px;
+            }
+        }
+        .right-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            button {
+                width: 140px;
+                height: 32px;
+                font-size: 15px;
+                border-radius: 8px;
+            }
+        }
+    }
+    .section-3{
+        #transaction-list-div{
+            
+            .transaction-head,
+            .transaction-row{
+                $w1: 220px;
+                $w2: 110px;
+                $w4: 120px;
+                $w5: 120px;
+                $w3: $w1 + $w2 + $w4 + $w5;
+                display: table;
+                > div {
+                    display: table-cell;
+                    padding: 10px 8px;
+                    border-bottom: 1px solid $color-gray-border;
+                }
+                > div:nth-child(1){
+                    width: $w1;
+                }
+                > div:nth-child(2){
+                    width: $w2;
+                }
+                > div:nth-child(3){
+                    width: calc(100vw - #{$w3});
+                }
+                > div:nth-child(4){
+                    width: $w4
+                }
+                > div:nth-child(5){
+                    width: $w5;
+                }
+            }
+        }
+    } 
+ }
+
+ 
