@@ -130,3 +130,8 @@ Output:
 2. Function that show the `TOTAL` count of the categories
 3. Test Driven Design
 4. Clean and understandable code
+
+### Work Process
+1. Fork this repository to start your challenge.
+2. Create a pull request when your work is done.
+3. Keep the comment conversation alive.
