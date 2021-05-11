@@ -17,7 +17,7 @@ We will test you on:
 
 1. Clean code
 2. Understanding of angular mechanism
-3. rxjs implementation
+3. rxjs implementation (@ngrx/store)
 4. TDD
 5. Defensive coding
 
@@ -66,8 +66,6 @@ In this exam, you'll build some new features from existing project.
 Requirements:
  - create new transaction page.
  - edit transaction page.
- - search transaction from transaction list.
- - sort transactions from transaction list.
 
 ### 2. What are we concern
 - separation of concerns
@@ -96,13 +94,6 @@ create new transaction screen design.
 10. Transaction note is an optional field with maximum 100 characters length.
 11. The validation will be triggered interactively with user's input.
 12. After successfully created new transaction, application must save the transaction into app's database (sqlite) and navigate back to transaction list screen.
-
-### Transaction list screen will also has the following requirements
-1. transaction list must show both transactions from remote API and local Database.
-2. you must implement your own search function (cannot use android class).
-3. you must implement your own sort function (cannot use android class).
-4. both search and sort function must work perfectly.
-5. you can design your own layout.
 
 ### Bonus
 1. There's some mistakes in the code structure and we will be pleasured if you can correct them.
