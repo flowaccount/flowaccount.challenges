@@ -18,6 +18,7 @@ using Flowaccount.Data.Handlers;
 using Flowaccount.Data.Models;
 using Flowaccount.Logic;
 using System.Text.Json;
+using api.Models;
 
 namespace api
 {
@@ -46,7 +47,9 @@ namespace api
 
 
             services.AddTransient<IRepository<Transactions>, DbRepository<Transactions>>();
+            services.AddTransient<IRepository<Category>, DbRepository<Category>>();
             services.AddTransient<ITransactionLogic, TransactionLogic>();
+            services.AddTransient<ICategoryLogic, CategoryLogic>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
