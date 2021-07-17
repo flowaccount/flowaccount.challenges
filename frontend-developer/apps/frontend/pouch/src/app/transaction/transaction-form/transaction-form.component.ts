@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CategoryModel, TransactionModel } from '@typescript/shared/models';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TransactionApiService } from '../transaction-api-service.service';
 
 @Component({
