@@ -1,0 +1,60 @@
+<p>transaction-form-component works!</p>
+
+<p>Mode : {{ isAddMode ? 'Add' : 'Update' }}</p>
+<p>Transaction : {{ data.transaction  }}</p>
+
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col-9">
+            <mat-form-field color="accent" appearance="fill">
+                <mat-label>หมวด</mat-label>
+                <mat-select  formControlName="categoryId"  >
+                    <mat-option [value]="null" disabled >เลือกหมวด</mat-option>
+                    <mat-option *ngFor="let option of categoryList" [value]="option.id">{{ option.name }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field color="accent" appearance="fill">
+                <mat-label>ประเภท</mat-label>
+                <mat-select  formControlName="financialType"  >
+                    <mat-option [value]="null" disabled >เลือกประเภท</mat-option>
+                    <mat-option *ngFor="let option of financialTypeList" [value]="option.id">{{ option.name }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field color="accent" appearance="fill">
+                <mat-label>วันที่ทำรายการ</mat-label>
+                <input matInput [matDatepicker]="datePicker" formControlName="transactionDate">
+                <mat-datepicker-toggle matSuffix [for]="datePicker">
+                </mat-datepicker-toggle>
+                <mat-datepicker #datePicker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field color="accent" appearance="fill">
+                <mat-label>Note</mat-label>
+                <input matInput formControlName="note">
+            </mat-form-field>
+
+            <div class="form-group">
+                <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Save
+                </button>
+                <a routerLink="/users" class="btn btn-link">Cancel</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

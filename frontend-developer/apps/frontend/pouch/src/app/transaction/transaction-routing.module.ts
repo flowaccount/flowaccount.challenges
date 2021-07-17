@@ -1,11 +1,11 @@
 import { NgModule } from "@angular/core";
 import { Route, RouterModule, Routes } from "@angular/router";
-import { TransactionListComponentComponent } from "./transaction-list-component/transaction-list-component.component";
+import { TransactionListComponent } from "./transaction-list/transaction-list.component";
 
 
 export const transactionIndexState: Route = {
     path: '',
-    component: TransactionListComponentComponent
+    component: TransactionListComponent
 }
 
 const routes: Routes = [transactionIndexState]
