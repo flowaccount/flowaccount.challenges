@@ -43,12 +43,15 @@ export class TransactionFormComponent implements OnInit {
     this.getListCategory();
 
     this.form = this.formBuilder.group({
-      categoryId: [null, Validators.required],
-      financialType: [null, Validators.required],
-      transactionDate: [new Date(), Validators.required],
-      note: [''],
+      categoryId: [this.transaction.categoryId, Validators.required],
+      financialType: [this.transaction.financialType, Validators.required],
+      transactionDate: [
+        this.transaction?.transactionDate ?? new Date(),
+        Validators.required,
+      ],
+      note: [this.transaction.note],
       value: [
-        null,
+        this.transaction.value,
         [
           Validators.required,
           Validators.pattern('^-?[1-9]?\\d?(\\.\\d+)?$|(^-?[1-9]\\d+)'),
@@ -81,14 +84,13 @@ export class TransactionFormComponent implements OnInit {
     if (this.isAddMode) {
       this.onProcessCreate(this.form.value);
     } else {
-      this.onProcessUpdate();
+      this.onProcessUpdate(this.transaction.id, this.form.value);
     }
   }
 
   async onProcessCreate(transaction) {
     await this.transactionApiService
       .create(transaction)
-      .pipe(first())
       .subscribe((resp: any) => {
         if (resp.Status) {
           this.onClose(resp);
@@ -96,8 +98,17 @@ export class TransactionFormComponent implements OnInit {
       });
   }
 
-  onProcessUpdate() {
-    return;
+  async onProcessUpdate(id, transaction) {
+    transaction.createdOn = this.transaction.createdOn;
+
+    await this.transactionApiService
+      .update(id, transaction)
+      .pipe(first())
+      .subscribe((resp: any) => {
+        if (resp.Status) {
+          this.onClose(resp);
+        }
+      });
   }
 
   onClose(resp = null) {

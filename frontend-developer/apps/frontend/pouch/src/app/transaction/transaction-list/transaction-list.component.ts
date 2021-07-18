@@ -48,6 +48,7 @@ export class TransactionListComponent implements OnInit {
         if (resp.Code === 200) {
           this.transactionList = resp.Data.list.map((x) => {
             x.financialTypeName = FinancialType[x.financialType];
+
             return x;
           });
         } else {

@@ -72,6 +72,7 @@ namespace Flowaccount.Logic
             }
 
             model.Id = id;
+            model.CreatedOn = existValue.CreatedOn.Date;
             model.ModifiedOn = currentDateTime;
             var rowEffected = _transactionRepository.Save(ActionModes.Update, model);
             if (rowEffected == 0)

@@ -59,7 +59,7 @@ namespace api.Controllers
         }
 
         [HttpPut("{id}")]
-        public Transactions Update(long id, Transactions model)
+        public Transactions Update(long id, [FromBody] Transactions model)
         {
             var result = _transactionLogic.Update(id, model);
             return result;
