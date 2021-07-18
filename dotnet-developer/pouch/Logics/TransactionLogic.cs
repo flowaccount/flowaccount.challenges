@@ -26,7 +26,7 @@ namespace Flowaccount.Logic
             model.CreatedOn = currentDateTime;
             model.ModifiedOn = currentDateTime;
             var rowEffected = _transactionRepository.Save(ActionModes.Create, model);
-            if(rowEffected == 0)
+            if (rowEffected == 0)
             {
                 return null;
             }
@@ -35,7 +35,7 @@ namespace Flowaccount.Logic
 
         public GridResponse<Transactions> FindBy()
         {
-            var allValue = _transactionRepository.Get(m => !m.IsDelete, m => m.Category).ToList();
+            var allValue = _transactionRepository.Get(m => !m.IsDelete, m => m.Category).OrderByDescending(x => x.CreatedOn).ToList();
             return new GridResponse<Transactions>
             {
                 Total = allValue.Count(),
@@ -70,7 +70,7 @@ namespace Flowaccount.Logic
             {
                 return null;
             }
-            
+
             model.Id = id;
             model.ModifiedOn = currentDateTime;
             var rowEffected = _transactionRepository.Save(ActionModes.Update, model);

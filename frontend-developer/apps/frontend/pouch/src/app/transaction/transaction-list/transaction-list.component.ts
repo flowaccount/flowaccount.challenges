@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { TransactionApiService } from '../transaction-api-service.service';
+import { MatDialog } from '@angular/material/dialog';
 import { TransactionModel } from '@typescript/shared/models';
 import { FinancialType } from 'libs/shared/models/src/lib/enums/transaction.enum';
-import { MatDialog } from '@angular/material/dialog';
+import { TransactionApiService } from '../transaction-api-service.service';
 import { TransactionFormComponent } from '../transaction-form/transaction-form.component';
 
 @Component({
@@ -22,11 +22,17 @@ export class TransactionListComponent implements OnInit {
   ) {}
 
   openTransactionFormDialog(trans = {}) {
-    this.dialog.open(TransactionFormComponent, {
+    const result = this.dialog.open(TransactionFormComponent, {
       width: '500px',
       data: {
         transaction: trans,
       },
+    });
+
+    result.afterClosed().subscribe((resp) => {
+      if (resp?.Status) {
+        this.getListTransactions();
+      }
     });
   }
 
@@ -72,6 +78,4 @@ export class TransactionListComponent implements OnInit {
 
     this.balance = this.totalIncome - this.totalExpense;
   }
-
-  onAddTransaction() {}
 }

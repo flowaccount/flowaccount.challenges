@@ -1,7 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CategoryModel, TransactionModel } from '@typescript/shared/models';
+import { first } from 'rxjs/operators';
 import { TransactionApiService } from '../transaction-api-service.service';
 
 @Component({
@@ -26,7 +27,8 @@ export class TransactionFormComponent implements OnInit {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     private formBuilder: FormBuilder,
-    private transactionApiService: TransactionApiService
+    private transactionApiService: TransactionApiService,
+    private dialogRef: MatDialogRef<TransactionFormComponent>
   ) {
     this.transaction = data.transaction;
     this.isAddMode = !this.transaction?.id;
@@ -45,7 +47,13 @@ export class TransactionFormComponent implements OnInit {
       financialType: [null, Validators.required],
       transactionDate: [new Date(), Validators.required],
       note: [''],
-      // value: [0, [Validators.required, Validators.pattern('/-?d*.?d{1,2}/')]],
+      value: [
+        null,
+        [
+          Validators.required,
+          Validators.pattern('^-?[1-9]?\\d?(\\.\\d+)?$|(^-?[1-9]\\d+)'),
+        ],
+      ],
     });
   }
 
@@ -62,22 +70,49 @@ export class TransactionFormComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
 
-    // reset alerts on submit
-    //this.alertService.clear();
+    this.onFormStageControl(this.form.valid);
 
     // stop here if form is invalid
-
-    console.log('summited', this.submitted);
-    console.log('categoryId', this.form.controls.categoryId);
     if (this.form.invalid) {
       return;
     }
 
     this.loading = true;
     if (this.isAddMode) {
-      //this.createUser();
+      this.onProcessCreate(this.form.value);
     } else {
-      // this.updateUser();
+      this.onProcessUpdate();
+    }
+  }
+
+  async onProcessCreate(transaction) {
+    await this.transactionApiService
+      .create(transaction)
+      .pipe(first())
+      .subscribe((resp: any) => {
+        if (resp.Status) {
+          this.onClose(resp);
+        }
+      });
+  }
+
+  onProcessUpdate() {
+    return;
+  }
+
+  onClose(resp = null) {
+    this.dialogRef.close(resp);
+  }
+
+  onFormStageControl(stage) {
+    if (stage) {
+      for (var control in this.form.controls) {
+        this.form.controls[control].disable();
+      }
+    } else {
+      for (var control in this.form.controls) {
+        this.form.controls[control].enable();
+      }
     }
   }
 }
