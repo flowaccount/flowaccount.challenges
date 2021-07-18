@@ -4,20 +4,20 @@
             <div class="left-div">
                 <div class="flex-item-div">
                         <div class="title">Income</div>
-                        <div class="amount color-green">6000</div>
+                        <div class="amount color-green">{{totalIncome | currency : ' '}}</div>
                 </div>
                 <div class="flex-item-div">
                         <div class="title">Expense</div>
-                        <div class="amount color-red">6000</div>
+                        <div class="amount color-red">{{totalExpense | currency : ' '}}</div>
                 </div>
                 <div class="flex-item-div">
                         <div class="title">Balance</div>
-                        <div class="amount color-blue">6000</div>
+                        <div class="amount color-blue">{{balance | currency : ' '}}</div>
                 </div>
             </div> 
             <div class="right-div">
                 <div>
-                    <button class="btn btn-success">+Add</button>
+                    <button class="btn btn-success" (click)="openTransactionFormDialog()">+Add</button>
                 </div>
             </div>
         </div> 
@@ -66,13 +66,15 @@
                     <div>&nbsp;</div> 
                 </div>
                 <div class="transaction-row-div">
-                    <div *ngFor="let row of rows"> 
+                    <div *ngFor="let transaction of transactionList"> 
                         <div class="transaction-row" >
-                            <div>{{ row.type }}</div>
-                            <div>{{ row.transactionDate }}</div>
-                            <div>{{ row.categoryId }}</div>
-                            <div class="text-right">{{ row.value }}</div>
-                            <div class="text-center"><i class="fas fa-pencil-alt"></i>&nbsp;&nbsp;<i class="fas fa-trash"></i></div>
+                            <div>{{ transaction.financialTypeName }}</div>
+                            <div>{{ transaction.transactionDate | date:"dd/MM/yyyy HH:mm"}}</div>
+                            <div>{{ transaction.category.name }}</div>
+                            <div class="text-right">{{ transaction.value | currency : ' '}}</div>
+                            <div class="text-center">
+                                <i class="fas fa-pencil-alt" (click)="openTransactionFormDialog(transaction)"></i>&nbsp;&nbsp;<i class="fas fa-trash"></i>
+                            </div>
                         </div>
                     </div>
                 </div>

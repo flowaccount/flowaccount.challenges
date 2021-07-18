@@ -9,23 +9,23 @@ using System.Linq;
 
 namespace Flowaccount.Logic
 {
-    public class TransactionLogic : ITransactionLogic
+    public class CategoryLogic : ICategoryLogic
     {
-        private readonly ILogger<TransactionLogic> _logger;
-        private readonly IRepository<Transactions> _transactionRepository;
+        private readonly ILogger<CategoryLogic> _logger;
+        private readonly IRepository<Category> _CategoryRepository;
 
-        public TransactionLogic(ILogger<TransactionLogic> logger, IRepository<Transactions> transactionRepository)
+        public CategoryLogic(ILogger<CategoryLogic> logger, IRepository<Category> CategoryRepository)
         {
             _logger = logger;
-            _transactionRepository = transactionRepository;
+            _CategoryRepository = CategoryRepository;
         }
 
-        public Transactions Create(Transactions model)
+        public Category Create(Category model)
         {
             var currentDateTime = DateTime.Now;
             model.CreatedOn = currentDateTime;
             model.ModifiedOn = currentDateTime;
-            var rowEffected = _transactionRepository.Save(ActionModes.Create, model);
+            var rowEffected = _CategoryRepository.Save(ActionModes.Create, model);
             if (rowEffected == 0)
             {
                 return null;
@@ -33,20 +33,20 @@ namespace Flowaccount.Logic
             return model;
         }
 
-        public GridResponse<Transactions> FindBy()
+        public GridResponse<Category> FindBy()
         {
-            var allValue = _transactionRepository.Get(m => !m.IsDelete, m => m.Category).OrderByDescending(x => x.CreatedOn).ToList();
-            return new GridResponse<Transactions>
+            var allValue = _CategoryRepository.Get(m => !m.IsDelete).ToList();
+            return new GridResponse<Category>
             {
                 Total = allValue.Count(),
                 List = allValue.ToPagedList(1, 20)
             };
         }
 
-        public int Remove(long id)
+        public int Remove(int id)
         {
             var currentDateTime = DateTime.Now;
-            var existValue = _transactionRepository.Get(m => m.Id == id && !m.IsDelete).FirstOrDefault();
+            var existValue = _CategoryRepository.Get(m => m.Id == id && !m.IsDelete).FirstOrDefault();
             if (existValue == null)
             {
                 return -1;
@@ -54,7 +54,7 @@ namespace Flowaccount.Logic
 
             existValue.Id = id;
             existValue.ModifiedOn = currentDateTime;
-            var rowEffected = _transactionRepository.Save(ActionModes.Update, existValue);
+            var rowEffected = _CategoryRepository.Save(ActionModes.Update, existValue);
             if (rowEffected == 0)
             {
                 return -1;
@@ -62,19 +62,18 @@ namespace Flowaccount.Logic
             return 1;
         }
 
-        public Transactions Update(long id, Transactions model)
+        public Category Update(int id, Category model)
         {
             var currentDateTime = DateTime.Now;
-            var existValue = _transactionRepository.Get(m => m.Id == id && !m.IsDelete).FirstOrDefault();
+            var existValue = _CategoryRepository.Get(m => m.Id == id && !m.IsDelete).FirstOrDefault();
             if (existValue == null)
             {
                 return null;
             }
 
             model.Id = id;
-            model.CreatedOn = existValue.CreatedOn.Date;
             model.ModifiedOn = currentDateTime;
-            var rowEffected = _transactionRepository.Save(ActionModes.Update, model);
+            var rowEffected = _CategoryRepository.Save(ActionModes.Update, model);
             if (rowEffected == 0)
             {
                 return null;

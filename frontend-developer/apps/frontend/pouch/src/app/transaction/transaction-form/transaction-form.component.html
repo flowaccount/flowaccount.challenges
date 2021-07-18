@@ -1,0 +1,74 @@
+<p>{{ isAddMode ? 'เพิ่มรายการ' : 'แก้ไขรายการ' }}</p>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div fxLayout="column" fxLayoutAlign="center" >
+        <mat-form-field color="accent" appearance="fill">
+            <mat-label>หมวด</mat-label>
+            <mat-select formControlName="categoryId" [value]="transaction.categoryId" [(ngModel)]="transaction.categoryId">
+                <mat-option [value]="null" disabled>เลือกหมวด</mat-option>
+                <mat-option *ngFor="let option of categoryList" [value]="option.id">{{ option.name }}</mat-option>
+            </mat-select>
+            <ng-container *ngIf="submitted && f.categoryId.errors">
+                <mat-label *ngIf="f.categoryId.errors.required" class="invalid" >กรุณาเลือกหมวด</mat-label>
+            </ng-container>
+        </mat-form-field>
+        <mat-form-field color="accent" appearance="fill">
+            <mat-label>ประเภท</mat-label>
+            <mat-select  formControlName="financialType" [value]="transaction.financialType" [(ngModel)]="transaction.financialType">
+                <mat-option [value]="null" disabled >เลือกประเภท</mat-option>
+                <mat-option *ngFor="let option of financialTypeList" [value]="option.id">{{ option.name }}</mat-option>
+            </mat-select>
+            <ng-container *ngIf="submitted && f.financialType.errors">
+                <mat-label *ngIf="f.financialType.errors.required" class="invalid" >กรุณาเลือกประเภท</mat-label>
+            </ng-container>
+        </mat-form-field>
+
+        <mat-form-field color="accent" appearance="fill">
+            <mat-label>วันที่ทำรายการ</mat-label>
+            <input matInput [matDatepicker]="datePicker" formControlName="transactionDate" [value]="transaction.transactionDate" >
+            <mat-datepicker-toggle matSuffix [for]="datePicker">
+            </mat-datepicker-toggle>
+            <mat-datepicker #datePicker></mat-datepicker>
+            <ng-container *ngIf="submitted && f.transactionDate.errors">
+                <mat-label *ngIf="f.transactionDate.errors.required" class="invalid" >กรุณาระบุวันทำรายการ</mat-label>
+            </ng-container>
+        </mat-form-field>
+        <mat-form-field color="accent" appearance="fill">
+            <mat-label>Note</mat-label>
+            <input matInput formControlName="note" [value]="transaction.note" [(ngModel)]="transaction.note">
+        </mat-form-field>
+        <mat-form-field color="accent" appearance="fill">
+            <mat-label>จำนวนเงิน</mat-label>
+            <input matInput formControlName="value" [value]="transaction.value" [(ngModel)]="transaction.value">
+            <ng-container *ngIf="submitted && f.value.errors">
+                <mat-label *ngIf="f.value.errors.required" class="invalid" >กรุณาระบุจำนวน</mat-label>
+                <mat-label *ngIf="f.value.errors.pattern" class="invalid" >กรุณาระบุเป็นตัวเลข</mat-label>
+            </ng-container>
+        </mat-form-field>
+
+        <div fxLayout="row" fxLayoutAlign="end">
+            <button mat-raised-button class="flex-button" type="button" (click)="onClose()" >ยกเลิก</button> 
+            <!-- [mat-dialog-close]="true" -->
+            <button mat-raised-button color="primary" [disabled]="loading" class="flex-button" >
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                บันทึก
+            </button>
+        </div>
+    </div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

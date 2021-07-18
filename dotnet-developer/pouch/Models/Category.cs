@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
-using Flowaccount.Data.Models;
+using Flowaccount.Data.Handlers;
 
-namespace api.Models
+namespace Flowaccount.Data.Models
 {
     [Table("Categories")]
-    public class Category
+    public class Category : IEntity
     {
         [Key]
         public int Id { get; set; }

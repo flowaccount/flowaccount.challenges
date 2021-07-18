@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TransactionListComponentComponent } from './transaction-list-component.component';
+import { TransactionListComponent } from './transaction-list.component';
 
 describe('TransactionListComponentComponent', () => {
-  let component: TransactionListComponentComponent;
-  let fixture: ComponentFixture<TransactionListComponentComponent>;
+  let component: TransactionListComponent;
+  let fixture: ComponentFixture<TransactionListComponent>;
   // let mockDataList = [
   //   {id: 7075979, name: "", type: 1, categoryName: "Food", categoryId: 1, value: 1000, transactionDate: "20/03/2021" },
   //   {id: 7075979, name: "dinner", type: 1, categoryName: "Food", categoryId: 1, value: 1000, transactionDate: "20/03/2021" }
@@ -19,13 +19,13 @@ describe('TransactionListComponentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TransactionListComponentComponent ]
+      declarations: [ TransactionListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TransactionListComponentComponent);
+    fixture = TestBed.createComponent(TransactionListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

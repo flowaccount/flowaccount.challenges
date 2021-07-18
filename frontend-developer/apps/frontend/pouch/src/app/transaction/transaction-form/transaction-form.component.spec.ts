@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TransactionFormComponentComponent } from './transaction-form-component.component';
+import { TransactionFormComponentComponent } from './transaction-form.component';
 
 describe('TransactionFormComponentComponent', () => {
   let component: TransactionFormComponentComponent;
